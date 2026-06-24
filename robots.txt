@@ -1,0 +1,34 @@
+# COPB2.org — crawler policy
+#
+# Search engines are welcome (see the "*" group below) so affected families
+# can find this resource. The crawlers listed here — AI training / scraping
+# bots — are asked not to crawl the site. Note: robots.txt is advisory; only
+# well-behaved bots honor it.
+
+# --- AI training / scraping crawlers: please do not crawl ---
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Claude-Web
+User-agent: Google-Extended
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: PerplexityBot
+User-agent: Applebot-Extended
+User-agent: Amazonbot
+User-agent: Meta-ExternalAgent
+User-agent: FacebookBot
+User-agent: Diffbot
+User-agent: Omgilibot
+User-agent: ImagesiftBot
+User-agent: YouBot
+User-agent: cohere-ai
+Disallow: /
+
+# --- Everyone else (Google, Bing, and other search engines): crawl freely ---
+User-agent: *
+Allow: /
+
+Sitemap: https://copb2org.github.io/sitemap.xml

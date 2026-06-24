@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>療法</title>
+  <meta content="痙縮や痙直型両麻痺（脳性麻痺にみられるような）のあるお子さんのためのエビデンスに基づく理学療法：何が効果的か、治療の信号機（トラフィックライト）、早期介入、装具、そして支援の見つけ方。一般的で出典のある情報であり、医学的助言ではありません。" name="description"/>
+  <meta content="#12807e" name="theme-color"/>
+  <link href="../assets/favicon.png" rel="icon" type="image/png"/>
+  <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="../css/styles.css" rel="stylesheet"/>
+
+  <meta content="website" property="og:type"/>
+  <meta content="療法" property="og:title"/>
+  <meta content="COPB2.org" property="og:site_name"/>
+  <meta content="痙縮や痙直型両麻痺（脳性麻痺にみられるような）のあるお子さんのためのエビデンスに基づく理学療法：何が効果的か、治療の信号機（トラフィックライト）、早期介入、装具、そして支援の見つけ方。一般的で出典のある情報であり、医学的助言ではありません。" property="og:description"/>
+  <meta content="https://copb2org.github.io/assets/og-image.png" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="https://copb2org.github.io/ja/therapy.html" property="og:url"/>
+  <link href="https://copb2org.github.io/ja/therapy.html" rel="canonical"/>
+  <meta content="療法" name="twitter:title"/>
+  <meta content="痙縮や痙直型両麻痺（脳性麻痺にみられるような）のあるお子さんのためのエビデンスに基づく理学療法：何が効果的か、治療の信号機（トラフィックライト）、早期介入、装具、そして支援の見つけ方。一般的で出典のある情報であり、医学的助言ではありません。" name="twitter:description"/>
+  <meta content="https://copb2org.github.io/assets/og-image.png" name="twitter:image"/>
+  <meta content="1200" property="og:image:width"/>
+  <meta content="630" property="og:image:height"/>
+  <style>
+    /* Therapy page (page-scoped) */
+    main section[id]{scroll-margin-top:84px}
+    /* Evidence traffic-light */
+    .tl{display:grid;gap:1rem;margin:1.4rem 0 .6rem}
+    @media(min-width:760px){.tl{grid-template-columns:repeat(3,1fr)}}
+    .tl-card{border:1px solid var(--line);border-radius:14px;padding:1rem 1.15rem;background:var(--surface)}
+    .tl-card h3{margin:.1rem 0 .15rem;font-size:1.04rem;display:flex;align-items:center;gap:.5rem}
+    .tl-card ul{margin:.4rem 0 0;padding-left:1.15rem}
+    .tl-card li{margin:.34rem 0;line-height:1.5;font-size:.92rem}
+    .tl-dot{width:.85rem;height:.85rem;border-radius:50%;display:inline-block;flex:0 0 auto}
+    .tl-green{background:#eef7f1}
+    .tl-green .tl-dot{background:#2f9e63}
+    .tl-amber{background:#fdf4ea}
+    .tl-amber .tl-dot{background:var(--amber-500)}
+    .tl-red{background:var(--coral-100)}
+    .tl-red .tl-dot{background:var(--coral-600)}
+    .grade{font-size:.7rem;font-weight:700;letter-spacing:.02em;padding:.12rem .5rem;border-radius:999px;white-space:nowrap;vertical-align:middle;margin-left:.4rem}
+    .grade--green{background:#e3f3ea;color:#1e6b43}
+    .grade--amber{background:#fdeedd;color:#8a5316}
+    .grade--red{background:var(--coral-100);color:#7a2f24}
+    /* Therapy "building blocks": icon header bands */
+    .tx-bands{list-style:none;margin:1.7rem 0 0;padding:0;display:flex;flex-direction:column;gap:1.1rem}
+    .tx-band{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
+    .tx-band__head{display:flex;align-items:center;gap:.7rem;padding:.8rem 1.1rem;background:var(--teal-50)}
+    .tx-band__head h3{margin:0;font-size:1.1rem;color:var(--teal-900)}
+    .tx-ico{flex:0 0 auto;width:1.85rem;height:1.85rem;color:var(--teal-700);display:flex}
+    .tx-ico svg{width:100%;height:100%}
+    .tx-band__head .grade{margin-left:auto}
+    .tx-band--care .tx-band__head{background:#fdf4ea}
+    .tx-band--care .tx-ico{color:var(--amber-500)}
+    .tx-band--care .tx-band__head h3{color:#8a5316}
+    .tx-band__body{padding:.9rem 1.1rem 1.1rem}
+    .pt-step__lead{font-weight:600;color:var(--ink-soft);margin:0 0 .5rem}
+    .tx-band__body>p{margin:.55rem 0 0}
+    .tx-band__body ul{margin:.55rem 0 0;padding-left:1.15rem}
+    .tx-band__body li{margin:.38rem 0;line-height:1.55}
+    .tx-band__body .note{margin-top:.65rem}
+    /* Traffic-light: non-colour glyph cue + AA-readable caption on the red card */
+    .tl-dot{position:relative}
+    .tl-green .tl-dot::before,.tl-amber .tl-dot::before,.tl-red .tl-dot::before{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.6rem;font-weight:700;line-height:1}
+    .tl-green .tl-dot::before{content:"\2713"}
+    .tl-amber .tl-dot::before{content:"~"}
+    .tl-red .tl-dot::before{content:"?"}
+    /* GMFCS level scale */
+    .gmfcs-scale{list-style:none;margin:.5rem 0 .5rem;padding:0;display:grid;gap:.85rem}
+    .gmfcs-scale li{display:grid;grid-template-columns:auto 1fr;gap:.85rem;align-items:start}
+    .gmfcs-lvl{display:flex;align-items:center;justify-content:center;min-width:2.3rem;height:2.3rem;padding:0 .5rem;border-radius:1.15rem;background:var(--teal-600);color:#fff;font-weight:700;font-size:.82rem;flex:0 0 auto}
+    .gmfcs-scale li>span:last-child{padding-top:.3rem;line-height:1.45;font-size:.92rem}
+    .gmfcs-scale .gmfcs-dim .gmfcs-lvl{background:transparent;color:var(--muted);border:1.5px solid var(--line)}
+    .gmfcs-scale .gmfcs-dim>span:last-child{color:var(--muted)}
+    /* On-this-page active link */
+    nav.toc a[aria-current="location"]{font-weight:700;color:var(--teal-700)}
+  </style>
+<link href="https://copb2org.github.io/therapy.html" hreflang="en" rel="alternate"/><link href="https://copb2org.github.io/zh/therapy.html" hreflang="zh" rel="alternate"/><link href="https://copb2org.github.io/es/therapy.html" hreflang="es" rel="alternate"/><link href="https://copb2org.github.io/fr/therapy.html" hreflang="fr" rel="alternate"/><link href="https://copb2org.github.io/ja/therapy.html" hreflang="ja" rel="alternate"/><link href="https://copb2org.github.io/therapy.html" hreflang="x-default" rel="alternate"/></head>
+<body>
+  <a class="skip-link" href="#main">メインコンテンツへスキップ</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a aria-label="COPB2.org ホーム" class="brand" href="index.html">
+        <img alt="" class="brand__mark" height="36" src="../assets/favicon.png" width="36"/>
+        <span class="brand__name">COPB2<b>.org</b></span>
+      </a>
+      <button aria-controls="nav-links" aria-expanded="false" aria-label="メニューを開く" data-label-open="メニューを開く" data-label-close="メニューを閉じる" class="nav__toggle">
+        <svg aria-hidden="true" class="icon-open" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+        <svg aria-hidden="true" class="icon-close" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24"><line x1="6" x2="18" y1="6" y2="18"></line><line x1="6" x2="18" y1="18" y2="6"></line></svg>
+      </button>
+      <nav aria-label="メインナビゲーション">
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="about.html">概要</a></li>
+        <li><a href="copb2.html">COPB2</a></li>
+        <li><a href="community.html">コミュニティ</a></li>
+
+        <li><a href="research.html">研究</a></li>
+        <li><a aria-current="page" href="therapy.html">療法</a></li>
+        <li><a href="glossary.html">用語集</a></li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">ホーム</a> / 療法</p>
+        <span class="eyebrow">療法とリハビリテーション</span>
+        <h1>痙直型両麻痺のための療法</h1>
+        <p class="lead measure">痙直型両麻痺、すなわち脚がこわばり、つっぱって立つことや歩くことが難しくなる状態は、脳性麻痺で最もよくみられるパターンの一つです。理学療法は、お子さんが筋力、移動能力、自立を
+          得るための主な方法であり、エビデンスは何よりもまず一つの考えに繰り返し立ち返ります：
+          <strong>能動的で目標志向の練習を、頻繁に行うことが、受動的な治療に勝る</strong>ということです。</p>
+      </div>
+    </section>
+
+    <!-- Medical disclaimer / honest note -->
+    <section class="section section--tight" id="disclaimer">
+      <div class="container measure mx-auto">
+        <p class="note"><strong>医学的助言ではありません。</strong> 役立つことはたくさんあり、痙直型両麻痺に対する
+          よく研究された療法の原則、すなわち能動的・目標志向・早期・個別化された療法は、
+          COPB2に特化したプロトコルはまだないものの、うまく応用できます。COPB2は遺伝性であり、このエビデンスの元となった
+          脳損傷による脳性麻痺とは異なる振る舞いをするかもしれないため、有資格の理学療法士が
+          お子さんに合わせてすべてを調整し、ここに記載のことがお子さんに不適切でないことを確認すべきです。例えば
+          負荷の高い筋力強化や手術の前に、また骨に関わる病型（OPDD）については、骨に安全に
+          負荷をかける方法について。このページは教育のための一般的な情報であり、治療計画ではありません。</p>
+      </div>
+    </section>
+
+    <!-- On this page -->
+    <section class="section section--tight">
+      <div class="container measure mx-auto">
+        <h2 id="on-this-page">このページの内容</h2>
+        <nav aria-labelledby="on-this-page" class="toc">
+          <ul class="list-check mt-1">
+            <li><a href="#principle">療法を効果的にする一つの考え</a></li>
+            <li><a href="#evidence">エビデンスが支持すること</a></li>
+            <li><a href="#therapies">各療法の解説</a></li>
+            <li><a href="#child">お子さんを理解する</a></li>
+            <li><a href="#early">早期の窓</a></li>
+            <li><a href="#team">チームと協力し、支援を見つける</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- THE ONE IDEA -->
+    <section class="section" id="principle">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">中心となる考え</span>
+        <h2>療法を効果的にする一つの考え</h2>
+        <p class="mt-1">あらゆる質の高いレビューにおいて、本当に運動を改善する療法には
+          一つの仕組みが共通しています：<strong>お子さん自身がその動きを行い、たくさん練習し、
+          本人が大切にする現実の目標に向かって取り組む</strong>こと、つまり階段を上る、遊び場でみんなについていく、
+          教室まで歩く、といった目標です。能動的で、繰り返し行われる、意味のある練習こそが、脳を再配線へと
+          導きます（科学者が経験依存的な神経可塑性と呼ぶものです）。</p>
+        <p>その裏返しも同じくらい重要です。<strong>受動的な、手を使った治療</strong>、つまり
+          療法士がお子さんを動かしたり、お子さんが受け身のまま筋緊張を「正常化」しようとしたりするもの
+          は <strong>効果がありません</strong>。役立つ目安があります：ある療法が主としてお子さんに対して
+          <em>される</em>ものであって、お子さん自身が能動的に行うものでないなら、その
+          エビデンスを尋ねるのは当然のことです。</p>
+        <p class="note">この分野の基準となる地図は、Novakの「信号機（トラフィックライト）」レビューであり、
+          脳性麻痺の治療を緑（行うべき）、黄（おそらく行ってよい、効果を測定しながら）、赤
+          （行うべきでない）に格付けします：<a href="https://pubmed.ncbi.nlm.nih.gov/32086598/" rel="noopener noreferrer" target="_blank">Novak et al., 2020 (PubMed)</a>。</p>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="evidence">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">何が効くか</span>
+        <h2>エビデンスが支持すること</h2>
+        <p class="mt-1">痙直型両麻痺に対する療法アプローチを、研究がどれだけ支持しているかで
+            分類した簡単な地図です。「支持される」とは、入手可能な最良のエビデンスがそれを行うことを
+            裏付けているという意味であり、それが治癒法だという意味ではありません。</p>
+      </div>
+      <div class="container">
+        <div aria-label="How strongly research supports each therapy" class="tl" role="group">
+          <div class="tl-card tl-green">
+            <h3><span aria-hidden="true" class="tl-dot"></span>行う：支持される</h3>
+            <ul>
+              <li>目標志向の、課題特異的な練習</li>
+              <li>漸進的な筋力トレーニング</li>
+              <li>トレッドミル（± 体重支持）と歩行トレーニング</li>
+              <li>ボツリヌス毒素 + 能動的療法；連続ギプス（serial casting）</li>
+              <li>選択的後根切断術（選ばれた歩行可能な両麻痺の方へ）</li>
+              <li>問題に合わせた足関節装具（AFO）</li>
+              <li>股関節サーベイランス；骨のための荷重</li>
+              <li>早期発見と早期介入；保護者コーチング</li>
+            </ul>
+          </div>
+          <div class="tl-card tl-amber">
+            <h3><span aria-hidden="true" class="tl-dot"></span>かもしれない：試して測定する</h3>
+            <ul>
+              <li>機能的電気刺激（下垂足に対して）</li>
+              <li>ロボット歩行トレーニング（結果はまちまち）</li>
+              <li>水中療法／ハイドロセラピー</li>
+              <li>ヒポセラピー（主に姿勢と体幹に）</li>
+              <li>適応型またはFES（機能的電気刺激）サイクリング</li>
+              <li>立位プログラム（骨と股関節のために）</li>
+            </ul>
+          </div>
+          <div class="tl-card tl-red">
+            <h3><span aria-hidden="true" class="tl-dot"></span>疑問：効果が弱いかない</h3>
+            <ul>
+              <li>古典的な受動的NDT／Bobath</li>
+              <li>（拘縮に対する）受動的ストレッチのみ</li>
+              <li>（運動技能に対する）感覚統合</li>
+              <li>スーツ療法（Therasuit／Adeli）</li>
+              <li>高気圧酸素療法；クラニオセイクラル療法</li>
+              <li>（運動の成果に対する）コンダクティブ教育、Vojta</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container measure mx-auto">
+        <p class="note">格付けは <a href="https://pubmed.ncbi.nlm.nih.gov/32086598/" rel="noopener noreferrer" target="_blank">Novak et al., 2020</a>
+          および下記に引用したCochraneとガイドラインのレビューを要約したものです。脳性麻痺のエビデンス基盤は
+          ほとんどが低〜中程度の質であるため、これらは最良の推定であって、保証ではありません。</p>
+      </div>
+    </section>
+
+    <section class="section" id="therapies">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">構成要素</span>
+        <h2>各療法の解説</h2>
+        <p class="mt-1">痙直型両麻痺のあるお子さんには、よい計画は通常これらのいくつかを組み合わせ、
+          家族の目標とお子さんのレベルに合わせて選びます。</p>
+
+        <ul class="tx-bands">
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 10.5v3M7 9v6M17 9v6M19.2 10.5v3M7 12h10"/></svg></span>
+<h3>動かして、強くする</h3>
+<span class="grade grade--green">支持される</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">現実の課題を能動的に繰り返し練習すること、それがほぼすべての
+                進歩の原動力です。</p>
+<ul>
+<li><strong>目標志向の、課題特異的なトレーニング</strong>、すなわち選んだ目標に向かって、
+                  現実の課題（立つ、踏み出す、上る）を練習すること。最も強力で、最も幅広く役立つアプローチです。</li>
+<li><strong>漸進的な筋力トレーニング</strong>：脚の筋力をつけても<em>痙縮が
+                  悪化することはなく</em>（長年の懸念でしたが、今では覆されています）、筋力、
+                  歩行速度、バランスを改善します。<a href="https://pubmed.ncbi.nlm.nih.gov/34407619/" rel="noopener noreferrer" target="_blank">（メタアナリシス、27試験）</a>
+                  一つ注意点があります：筋力だけでは自動的によりよい歩行につながるわけではないため、
+                  課題練習と組み合わせてください。</li>
+<li><strong>家庭での練習</strong>：短く、定期的で、目標に焦点を当てた練習を
+                  日常生活に織り込むことで、療法を効果的にする<em>量（ドーズ）</em>が加わります。能動的な練習の量こそが、
+                  療法のブランド名よりも重要です。</li>
+</ul>
+</div>
+</li>
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4.5" r="2"/><path d="M12.5 7.5L11 13.5L8 19.5"/><path d="M11 13.5l4 2l-1.5 4.5"/><path d="M9.3 11L12.3 8.7L15 10.7"/></svg></span>
+<h3>より遠く、より楽に歩く</h3>
+<span class="grade grade--green">支持される</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">現実世界での練習を通じて、歩行をより速く、より安定させ、より疲れにくくします。</p>
+<ul>
+<li><strong>トレッドミルトレーニング、体重支持あり・なし</strong>は、
+                  歩行が可能なお子さんの歩行速度を改善するうえで最も高く評価されるアプローチの一つです（持久力への効果は
+                  あまり確実ではありません）。</li>
+<li><strong>平地での歩行と機能的歩行トレーニング</strong>、すなわち現実の場所で
+                  現実の歩行を練習すること；移動能力に取り組むうえでの土台です。</li>
+<li><strong>有酸素フィットネス</strong>は、スタミナ、健康、参加を改善し、
+                  時間とともに活動量が減っていく傾向に対抗するのに役立ちます。</li>
+</ul>
+</div>
+</li>
+<li class="tx-band tx-band--care"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="6.5" width="4" height="9" rx="1" transform="rotate(45 11 11)"/><path d="M7.8 14.2L5 17"/><path d="M14.2 7.8L17 5"/><path d="M16 4L18 6"/></svg></span>
+<h3>痙縮を管理する</h3>
+<span class="grade grade--amber">支持される、ただし慎重に</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">こわばりそのものを和らげる医学的治療を、能動的な
+                療法と組み合わせます。</p>
+<p>二種類のこわばりの違いを知っておくと役立ちます：<strong>痙縮</strong>、
+                すなわち素早い動きに抵抗する筋のこわばりは、しばしば和らげることができます（例えば
+                ボツリヌス毒素や手術で）。しかし、いったん筋が固定された短縮した
+                <strong>拘縮</strong>になってしまうと、それらの筋緊張に対する治療ではもはや元に戻せません。だからこそ
+                <em>タイミング</em>が重要なのです。これらは専門チームが決めることです：</p>
+<ul>
+<li>特定のこわばった筋への<strong>ボツリヌス毒素（「ボトックス」）注射</strong>は、
+                  限局したこわばりを数か月間和らげ、能動的な療法やギプスのための窓を開くことができます。筋緊張を
+                  減らすことについては十分に確立していますが、日常の<em>機能</em>への効果はあまり確実ではなく、
+                  繰り返す注射は筋の健康について疑問を生じさせるため、選択的に用いられます。<a href="https://pubmed.ncbi.nlm.nih.gov/31591703/" rel="noopener noreferrer" target="_blank">（Cochraneレビュー）</a></li>
+<li><strong>選択的後根切断術（SDR）</strong>は、感覚神経根の一部を切断することで
+                  脚の痙縮を永続的に減らす一回限りの脊髄手術で、その後に数か月の集中的な理学療法が続きます。
+                  <em>慎重に選ばれた</em>痙直型両麻痺の歩行可能なお子さん（多くはGMFCS II〜III、おおよそ3〜10歳）では、
+                  持続的な痙縮の緩和をもたらし、よく選ばれた候補者では、数年後に報告される歩行と自立の向上を
+                  もたらすことがあります。<a href="https://pubmed.ncbi.nlm.nih.gov/23713680/" rel="noopener noreferrer" target="_blank">（長期フォローアップ）</a>
+                  不可逆的であり、また他のあらゆる脊髄手術と同様にリスクを伴う（感覚、
+                  膀胱や腸の機能の変化、側弯症などの後の脊椎の問題）ため、慎重なチーム評価の後にのみ
+                  提供され、集中的な理学療法のみとの長期的な直接比較はまだ限られています。</li>
+<li><strong>連続ギプス（serial casting）</strong>は、こわばったふくらはぎを穏やかに伸ばす一連のギプスで、
+                  まだ柔軟な早期のこわばりに効果的で、しばしばボツリヌス毒素の後に用いられます。</li>
+<li><strong>髄腔内バクロフェンと経口薬</strong>は、主としてより重度の、
+                  全身性の痙縮のためのもので、医学的な決定です。</li>
+</ul>
+<p class="note">小児の痙縮管理について：<a href="https://www.nice.org.uk/guidance/cg145" rel="noopener noreferrer" target="_blank">NICEガイドライン CG145</a>。</p>
+</div>
+</li>
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3.5v9.5q0 3 -3 3h-7q-2 0 -2 -2"/><path d="M12 3.5v9.5L5 14"/><path d="M12 6.5h5M12 10.5h5"/></svg></span>
+<h3>装具と用具</h3>
+<span class="grade grade--green">支持される</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">特定の問題に合わせた、適切な装具や移動補助具。</p>
+<ul>
+<li><strong>足関節装具（AFO）</strong>は歩行を改善します。ただし<em>種類</em>が
+                  問題に合っている必要があります：下垂足には固定式またはリーフスプリング式のAFO；お子さんが
+                  立ち上がりや階段のために足首を曲げる必要があるときには<strong>継手付き（ヒンジ）</strong>の
+                  AFO；柔軟なクラウチ（しゃがみ歩行）には<strong>床反力（グラウンドリアクション）</strong>AFO。<a href="https://pubmed.ncbi.nlm.nih.gov/29714066/" rel="noopener noreferrer" target="_blank">（AFOメタアナリシス、56研究）</a></li>
+<li><strong>歩行器、歩行トレーナー、車いす</strong>：お子さんのレベルに合った
+                  適切な移動補助具は、自立と参加を支えます。長距離に車いすを使うことは歩行を
+                  「あきらめる」ことではありません。大切なことのためにエネルギーを節約してくれます。</li>
+<li>「筋緊張を減らす」装具の機能や夜間スプリントは<strong>エビデンスが
+                  弱く</strong>、疑問に思うのは妥当です。</li>
+</ul>
+</div>
+</li>
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="8.7" y1="15.3" x2="15.3" y2="8.7"/><circle cx="7.4" cy="14.4" r="1.7"/><circle cx="9.6" cy="16.6" r="1.7"/><circle cx="14.4" cy="7.4" r="1.7"/><circle cx="16.6" cy="9.6" r="1.7"/></svg></span>
+<h3>股関節と骨を守る</h3>
+<span class="grade grade--green">支持される</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">お子さんの成長に合わせて、股関節を正しい位置に保ち、骨を強く保ちます。</p>
+<ul>
+<li><strong>股関節サーベイランス</strong>：GMFCSレベルに応じて設定された
+                  スケジュールでの定期的な股関節X線検査は、最も治療しやすい早い段階で股関節の脱臼（変位）を
+                  発見します。集団全体を対象としたサーベイランスプログラムは、股関節脱臼を劇的に減らしてきました。<a href="https://www.aacpdm.org/publications/care-pathways/hip-surveillance-in-cerebral-palsy" rel="noopener noreferrer" target="_blank">（AACPDMケアパスウェイ）</a></li>
+<li><strong>荷重／立位、ビタミンD、カルシウム</strong>は、骨の強さにとって
+                  重要であり、特に歩くことが少ないお子さんでは大切です。（COPB2の骨の病型であるOPDDについては、
+                  骨の専門医と一緒に荷重を計画してください。）</li>
+<li><strong>拘縮を防ぐ</strong>：能動的な運動、筋力強化、ギプス、立位プログラムは、
+                  それだけではこわばりを防げない受動的ストレッチよりも、より大きな効果があります。</li>
+</ul>
+</div>
+</li>
+</ul>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="child">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">出発点を知る</span>
+        <h2>お子さんを理解する</h2>
+
+        <h3 class="mt-3">GMFCS：今どこにいるか</h3>
+        <p class="mt-1">粗大運動機能分類システム（GMFCS）は、お子さんがどのように動くかを五つのレベルで
+          記述します。痙直型両麻痺は通常レベルI〜III（補助具あり・なしで歩行）です。これは
+          チームが現実的な目標を立て、股関節のリスクを判断し、手術などの選択肢から誰が恩恵を受けられるかを
+          決めるのに役立ちます。これは出発点であって、目指すべきことの<strong>上限ではありません</strong>。</p>
+        <p class="note">おおよそ、6〜12歳ごろの場合：</p>
+        <ul class="gmfcs-scale">
+          <li><span class="gmfcs-lvl">I</span><span>どこでも歩く；走ること、速さ、バランスが難しいことがある。</span></li>
+          <li><span class="gmfcs-lvl">II</span><span>ほとんどの場所で歩く；階段では手すりにつかまることがあり、長距離、でこぼこした地面、人混みが難しいことがある。</span></li>
+          <li><span class="gmfcs-lvl">III</span><span>歩行器や杖などの手で持つ補助具を使って歩き、長距離には車いすを使うことがある。</span></li>
+          <li class="gmfcs-dim"><span class="gmfcs-lvl">IV–V</span><span>主に車いすでの移動（痙直型両麻痺ではあまり一般的でない）。</span></li>
+        </ul>
+        <p class="note"><a href="https://canchild.ca/en/resources/42-gross-motor-function-classification-system-expanded-revised-gmfcs-e-r" rel="noopener noreferrer" target="_blank">GMFCSの解説（CanChild）</a></p>
+
+        <h3 class="mt-3">「正常」ではなく、目標を</h3>
+        <p class="mt-1">現代の療法は<strong>家族が選ぶ具体的な目標</strong>を立て（例えば
+          「キッチンを安全に歩いて横切る」）、そのまさにその課題を練習します。目標は
+          シンプルなツール（目標達成スケーリングなど）で追跡され、療法が効いているかどうかを見て
+          調整できます。</p>
+
+        <h3 class="mt-3">最も大切なこと</h3>
+        <p class="mt-1">療法を、単なる身体の仕組みではなく、よい人生に向けたものに保つためのシンプルな方法：お子さんが
+          何かをどのように行うかは、それがどれだけ「正常」に見えるかよりも重要です。</p>
+      </div>
+    </section>
+
+    <section class="section" id="early">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">タイミングが重要</span>
+        <h2>早期の窓</h2>
+        <p class="mt-1">脳性麻痺や関連する運動の問題は、今では<strong>およそ生後6か月になる前</strong>に、
+          運動評価（General Movements）、短い神経学的診察（HINE）、MRIを組み合わせることで検出できます。
+          従来の「様子を見る」診断よりもずっと早く。
+          <a href="https://pubmed.ncbi.nlm.nih.gov/28715518/" rel="noopener noreferrer" target="_blank">（Novak et al., 2017）</a>
+          この早期の窓は脳が最も順応しやすいときであり、能動的で、豊かで、保護者が行う
+          練習を早く始めること、すなわち<strong>GAME</strong>（Goals–Activity–Motor
+          Enrichment、目標・活動・運動エンリッチメント）などのプログラムが、それを最大限に活かします。<a href="https://pubmed.ncbi.nlm.nih.gov/33999106/" rel="noopener noreferrer" target="_blank">（早期介入ガイドライン）</a></p>
+        <p><strong>保護者コーチング</strong>、すなわち日々の遊びの中に練習を組み込む方法を家族に示すこと
+          と、介護者自身の健康（ウェルビーイング）への支援は、それ自体がよいケアのエビデンスに基づく
+          一部です。</p>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="team">
+      <div class="container measure mx-auto">
+          <span class="eyebrow">一緒に取り組む</span>
+          <h2>チームと協力し、支援を見つける</h2>
+          <p class="mt-1">よい療法計画は、あなた、お子さん、そして支えてくれる人々とのパートナーシップです。</p>
+
+          <h3 class="mt-3">うまくいくために大切なこと</h3>
+          <ul class="list-check mt-1">
+            <li><strong>2〜3個の具体的な目標を設定する</strong>こと、一緒に、そしてそれらを見直す。</li>
+            <li><strong>ドーズ（量）について尋ねる</strong>：意味のある変化には通常、本当の練習量が必要であり、
+              その多くは家庭で行われるもので、週に一度の短い通院ではありません。</li>
+            <li><strong>進歩を測定する</strong>こと、標準的なツール（例えば粗大運動機能尺度（Gross Motor Function
+              Measure）や目標達成スケーリング）を使って、何が役立っているかが分かるように。</li>
+            <li><strong>チームを作る</strong>：ここでは理学療法が中心となり、それと並んで作業療法
+              （日常の課題、手、座位）、必要に応じて言語・摂食療法、装具、そして
+              痙縮と骨の健康のための医師が加わります。</li>
+          </ul>
+
+          <h3 class="mt-3">支援の見つけ方</h3>
+      </div>
+      <div class="container">
+        <div class="grid grid--3 mt-3">
+          <article class="card">
+            <h3>始めるには（米国）</h3>
+            <p>無料または低費用の<strong>早期介入</strong>（出生から3歳まで）は、IDEA Part Cのもとで
+              すべての州で利用できます。保護者からの要請や小児科医からの紹介により、無料の
+              評価と個別化された支援計画が始まります。3歳からは、学校制度を通じてサービスが続きます。</p>
+            <ul class="mt-1">
+              <li><a href="https://www.parentcenterhub.org/ei-overview/" rel="noopener noreferrer" target="_blank">早期介入：概要</a></li>
+              <li><a href="https://ectacenter.org/partc/partc.asp" rel="noopener noreferrer" target="_blank">お住まいの州のプログラムを探す</a></li>
+            </ul>
+            <p class="note">米国外では、小児科医または臨床遺伝医に、地域の
+              子どもの発達、早期介入、または理学療法のサービスへの紹介を頼んでください。</p>
+          </article>
+          <article class="card card--accent">
+            <h3>療法士を探す</h3>
+            <ul class="mt-1">
+              <li><a href="https://pediatricapta.org/consumers/" rel="noopener noreferrer" target="_blank">APTA Pediatrics</a>：理学療法、家族向けリソース</li>
+              <li><a href="https://www.aota.org/" rel="noopener noreferrer" target="_blank">AOTA</a>：作業療法</li>
+              <li><a href="https://www.asha.org/" rel="noopener noreferrer" target="_blank">ASHA</a>：言語・摂食療法</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>ガイドラインとさらに深く読むために</h3>
+            <ul class="mt-1">
+              <li><a href="https://pubmed.ncbi.nlm.nih.gov/32086598/" rel="noopener noreferrer" target="_blank">Novakによる、何が効くかの「信号機（トラフィックライト）」レビュー</a></li>
+              <li><a href="https://www.nice.org.uk/guidance/cg145" rel="noopener noreferrer" target="_blank">NICE CG145：19歳未満の痙縮</a></li>
+              <li><a href="https://www.nice.org.uk/guidance/ng62" rel="noopener noreferrer" target="_blank">NICE NG62：脳性麻痺</a></li>
+              <li><a href="https://www.aacpdm.org/publications/care-pathways/" rel="noopener noreferrer" target="_blank">AACPDMケアパスウェイ</a></li>
+              <li><a href="https://canchild.ca/" rel="noopener noreferrer" target="_blank">CanChild：GMFCSと家族向けツール</a></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+      <div class="container measure mx-auto">
+        <p class="note mt-3">診断が何であれ、療法計画は
+          <strong>個別化される</strong>べきであり、これらのリソースは出発点であって、処方箋ではありません。</p>
+      </div>
+    </section>
+
+    <section class="section section--teal">
+      <div class="container cta-banner">
+        <h2>COPB2.orgをさらに見る</h2>
+        <div class="btn-row btn-row--center mt-2">
+          <a class="btn btn--light" href="copb2.html">COPB2</a>
+
+          <a class="btn btn--light" href="research.html">研究</a>
+          <a class="btn btn--light" href="glossary.html">用語集</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a aria-label="COPB2.org ホーム" class="brand" href="index.html"><img alt="" class="brand__mark" height="36" src="../assets/favicon.png" width="36"/> <span class="brand__name" style="color:#fff">COPB2.org</span></a>
+          <p>COPB2遺伝子とそれに関連する希少な病態についての、独立した非営利の情報リソースです。</p>
+        </div>
+        <div class="footer">
+          <h4>探す</h4>
+          <ul>
+            <li><a href="about.html">概要</a></li>
+            <li><a href="copb2.html">COPB2</a></li>
+
+            <li><a href="research.html">研究</a></li>
+            <li><a href="therapy.html">療法</a></li>
+            <li><a href="glossary.html">用語集</a></li>
+            <li><a href="community.html">コミュニティ</a></li>
+          </ul>
+        </div>
+        <div class="footer">
+          <h4>信頼できる情報源</h4>
+          <ul>
+            <li><a href="https://omim.org/entry/606990" rel="noopener noreferrer" target="_blank">OMIM — COPB2</a></li>
+            <li><a href="https://www.ncbi.nlm.nih.gov/gene/9276" rel="noopener noreferrer" target="_blank">NCBI Gene 9276</a></li>
+            <li><a href="https://medlineplus.gov/genetics/" rel="noopener noreferrer" target="_blank">MedlinePlus Genetics</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year="">2026</span> COPB2.org. 非営利の情報リソースです。</span>
+        <span>医学的助言ではありません · <a href="therapy.html#disclaimer">免責事項をお読みください</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/lang-nav.js"></script>
+
+  <!-- On-this-page scroll-spy (progressive enhancement) -->
+  <script>
+  (function () {
+    var nav = document.querySelector('nav.toc');
+    if (!nav) return;
+    var links = {};
+    var sections = [];
+    nav.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      var s = document.getElementById(id);
+      if (s) { links[id] = a; sections.push(s); }
+    });
+    if (!sections.length) return;
+    var current = null, ticking = false;
+    function update() {
+      ticking = false;
+      var activeId = null;
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i].getBoundingClientRect().top <= 100) activeId = sections[i].id;
+        else break;
+      }
+      var next = activeId ? links[activeId] : null;
+      if (next !== current) {
+        if (current) current.removeAttribute('aria-current');
+        current = next;
+        if (current) current.setAttribute('aria-current', 'location');
+      }
+    }
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    update();
+  })();
+  </script>
+
+
+</body></html>

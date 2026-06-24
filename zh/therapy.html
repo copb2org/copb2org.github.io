@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh"><head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>治疗</title>
+  <meta content='为患有肌张力增高和痉挛型双瘫（如脑性瘫痪）的儿童提供循证物理治疗：什么有效、治疗方案的"红绿灯"分级、早期干预、支具佩戴，以及如何寻求帮助。这是通用的、有据可查的信息，并非医疗建议。' name="description"/>
+  <meta content="#12807e" name="theme-color"/>
+  <link href="../assets/favicon.png" rel="icon" type="image/png"/>
+  <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="../css/styles.css" rel="stylesheet"/>
+
+  <meta content="website" property="og:type"/>
+  <meta content="治疗" property="og:title"/>
+  <meta content="COPB2.org" property="og:site_name"/>
+  <meta content='为患有肌张力增高和痉挛型双瘫（如脑性瘫痪）的儿童提供循证物理治疗：什么有效、治疗方案的"红绿灯"分级、早期干预、支具佩戴，以及如何寻求帮助。这是通用的、有据可查的信息，并非医疗建议。' property="og:description"/>
+  <meta content="https://copb2org.github.io/assets/og-image.png" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="https://copb2org.github.io/zh/therapy.html" property="og:url"/>
+  <link href="https://copb2org.github.io/zh/therapy.html" rel="canonical"/>
+  <meta content="治疗" name="twitter:title"/>
+  <meta content='为患有肌张力增高和痉挛型双瘫（如脑性瘫痪）的儿童提供循证物理治疗：什么有效、治疗方案的"红绿灯"分级、早期干预、支具佩戴，以及如何寻求帮助。这是通用的、有据可查的信息，并非医疗建议。' name="twitter:description"/>
+  <meta content="https://copb2org.github.io/assets/og-image.png" name="twitter:image"/>
+  <meta content="1200" property="og:image:width"/>
+  <meta content="630" property="og:image:height"/>
+  <style>
+    /* Therapy page (page-scoped) */
+    main section[id]{scroll-margin-top:84px}
+    /* Evidence traffic-light */
+    .tl{display:grid;gap:1rem;margin:1.4rem 0 .6rem}
+    @media(min-width:760px){.tl{grid-template-columns:repeat(3,1fr)}}
+    .tl-card{border:1px solid var(--line);border-radius:14px;padding:1rem 1.15rem;background:var(--surface)}
+    .tl-card h3{margin:.1rem 0 .15rem;font-size:1.04rem;display:flex;align-items:center;gap:.5rem}
+    .tl-card ul{margin:.4rem 0 0;padding-left:1.15rem}
+    .tl-card li{margin:.34rem 0;line-height:1.5;font-size:.92rem}
+    .tl-dot{width:.85rem;height:.85rem;border-radius:50%;display:inline-block;flex:0 0 auto}
+    .tl-green{background:#eef7f1}
+    .tl-green .tl-dot{background:#2f9e63}
+    .tl-amber{background:#fdf4ea}
+    .tl-amber .tl-dot{background:var(--amber-500)}
+    .tl-red{background:var(--coral-100)}
+    .tl-red .tl-dot{background:var(--coral-600)}
+    .grade{font-size:.7rem;font-weight:700;letter-spacing:.02em;padding:.12rem .5rem;border-radius:999px;white-space:nowrap;vertical-align:middle;margin-left:.4rem}
+    .grade--green{background:#e3f3ea;color:#1e6b43}
+    .grade--amber{background:#fdeedd;color:#8a5316}
+    .grade--red{background:var(--coral-100);color:#7a2f24}
+    /* Therapy "building blocks": icon header bands */
+    .tx-bands{list-style:none;margin:1.7rem 0 0;padding:0;display:flex;flex-direction:column;gap:1.1rem}
+    .tx-band{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
+    .tx-band__head{display:flex;align-items:center;gap:.7rem;padding:.8rem 1.1rem;background:var(--teal-50)}
+    .tx-band__head h3{margin:0;font-size:1.1rem;color:var(--teal-900)}
+    .tx-ico{flex:0 0 auto;width:1.85rem;height:1.85rem;color:var(--teal-700);display:flex}
+    .tx-ico svg{width:100%;height:100%}
+    .tx-band__head .grade{margin-left:auto}
+    .tx-band--care .tx-band__head{background:#fdf4ea}
+    .tx-band--care .tx-ico{color:var(--amber-500)}
+    .tx-band--care .tx-band__head h3{color:#8a5316}
+    .tx-band__body{padding:.9rem 1.1rem 1.1rem}
+    .pt-step__lead{font-weight:600;color:var(--ink-soft);margin:0 0 .5rem}
+    .tx-band__body>p{margin:.55rem 0 0}
+    .tx-band__body ul{margin:.55rem 0 0;padding-left:1.15rem}
+    .tx-band__body li{margin:.38rem 0;line-height:1.55}
+    .tx-band__body .note{margin-top:.65rem}
+    /* Traffic-light: non-colour glyph cue + AA-readable caption on the red card */
+    .tl-dot{position:relative}
+    .tl-green .tl-dot::before,.tl-amber .tl-dot::before,.tl-red .tl-dot::before{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.6rem;font-weight:700;line-height:1}
+    .tl-green .tl-dot::before{content:"\2713"}
+    .tl-amber .tl-dot::before{content:"~"}
+    .tl-red .tl-dot::before{content:"?"}
+    /* GMFCS level scale */
+    .gmfcs-scale{list-style:none;margin:.5rem 0 .5rem;padding:0;display:grid;gap:.85rem}
+    .gmfcs-scale li{display:grid;grid-template-columns:auto 1fr;gap:.85rem;align-items:start}
+    .gmfcs-lvl{display:flex;align-items:center;justify-content:center;min-width:2.3rem;height:2.3rem;padding:0 .5rem;border-radius:1.15rem;background:var(--teal-600);color:#fff;font-weight:700;font-size:.82rem;flex:0 0 auto}
+    .gmfcs-scale li>span:last-child{padding-top:.3rem;line-height:1.45;font-size:.92rem}
+    .gmfcs-scale .gmfcs-dim .gmfcs-lvl{background:transparent;color:var(--muted);border:1.5px solid var(--line)}
+    .gmfcs-scale .gmfcs-dim>span:last-child{color:var(--muted)}
+    /* On-this-page active link */
+    nav.toc a[aria-current="location"]{font-weight:700;color:var(--teal-700)}
+  </style>
+<link href="https://copb2org.github.io/therapy.html" hreflang="en" rel="alternate"/><link href="https://copb2org.github.io/zh/therapy.html" hreflang="zh" rel="alternate"/><link href="https://copb2org.github.io/es/therapy.html" hreflang="es" rel="alternate"/><link href="https://copb2org.github.io/fr/therapy.html" hreflang="fr" rel="alternate"/><link href="https://copb2org.github.io/ja/therapy.html" hreflang="ja" rel="alternate"/><link href="https://copb2org.github.io/therapy.html" hreflang="x-default" rel="alternate"/></head>
+<body>
+  <a class="skip-link" href="#main">跳至主要内容</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a aria-label="COPB2.org 首页" class="brand" href="index.html">
+        <img alt="" class="brand__mark" height="36" src="../assets/favicon.png" width="36"/>
+        <span class="brand__name">COPB2<b>.org</b></span>
+      </a>
+      <button aria-controls="nav-links" aria-expanded="false" aria-label="打开菜单" data-label-open="打开菜单" data-label-close="关闭菜单" class="nav__toggle">
+        <svg aria-hidden="true" class="icon-open" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+        <svg aria-hidden="true" class="icon-close" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24"><line x1="6" x2="18" y1="6" y2="18"></line><line x1="6" x2="18" y1="18" y2="6"></line></svg>
+      </button>
+      <nav aria-label="主导航">
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html">关于</a></li>
+        <li><a href="copb2.html">COPB2</a></li>
+        <li><a href="community.html">社区</a></li>
+
+        <li><a href="research.html">研究</a></li>
+        <li><a aria-current="page" href="therapy.html">治疗</a></li>
+        <li><a href="glossary.html">术语表</a></li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">首页</a> / 治疗</p>
+        <span class="eyebrow">治疗与康复</span>
+        <h1>针对痉挛型双瘫的治疗</h1>
+        <p class="lead measure">痉挛型双瘫，即僵硬、紧绷的双腿使站立和行走变得困难，
+          是脑性瘫痪中最常见的类型之一。物理治疗是
+          儿童获得力量、活动能力和独立性的主要途径，而证据始终一再指向一个核心理念：
+          <strong>主动的、目标导向的、经常进行的练习，胜过被动治疗</strong>。</p>
+      </div>
+    </section>
+
+    <!-- Medical disclaimer / honest note -->
+    <section class="section section--tight" id="disclaimer">
+      <div class="container measure mx-auto">
+        <p class="note"><strong>并非医疗建议。</strong> 有许多方法能够提供帮助，而
+          针对痉挛型双瘫治疗那些经过充分研究的原则，即主动、目标导向、早期且
+          个性化，具有良好的适用性，尽管目前还没有专门针对COPB2的方案。由于
+          COPB2是基因性的，其表现可能与这些证据所来源的脑损伤型脑性瘫痪不同，因此应由
+          合格的物理治疗师为您的孩子量身定制一切，并确认本页的任何内容都不
+          适用于您的孩子，例如在进行高强度力量训练或手术之前，以及对于骨骼类型
+          （OPDD），如何安全地给骨骼施加负荷。本页是用于教育目的的通用信息，而非治疗
+          方案。</p>
+      </div>
+    </section>
+
+    <!-- On this page -->
+    <section class="section section--tight">
+      <div class="container measure mx-auto">
+        <h2 id="on-this-page">本页内容</h2>
+        <nav aria-labelledby="on-this-page" class="toc">
+          <ul class="list-check mt-1">
+            <li><a href="#principle">让治疗有效的那个核心理念</a></li>
+            <li><a href="#evidence">证据支持哪些方法</a></li>
+            <li><a href="#therapies">各种治疗方法详解</a></li>
+            <li><a href="#child">了解您的孩子</a></li>
+            <li><a href="#early">早期窗口期</a></li>
+            <li><a href="#team">与您的团队合作并寻求帮助</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- THE ONE IDEA -->
+    <section class="section" id="principle">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">核心理念</span>
+        <h2>让治疗有效的那个核心理念</h2>
+        <p class="mt-1">在每一篇高质量的综述中，那些真正改善运动功能的治疗方法都有
+          一个共同的机制：<strong>孩子自己完成这个动作、大量练习，并朝着一个
+          他们真正在意的实际目标努力</strong>，例如爬楼梯、在操场上跟上同伴、走
+          到教室。主动、反复、有意义的练习，正是驱动大脑重新建立连接的因素（科学家
+          称之为依赖经验的神经可塑性）。</p>
+        <p>反面同样重要。<strong>被动的、徒手的治疗</strong>，即
+          由治疗师移动孩子或试图在孩子保持被动的情况下"使肌张力正常化"，<strong>是无效的</strong>。一个有用的判断标准：如果一种治疗主要是
+          <em>对</em>您的孩子做某事，而不是您的孩子主动去做某事，那么要求查看其
+          证据是合理的。</p>
+        <p class="note">该领域的参考指南是Novak的"红绿灯"综述，它
+          将脑性瘫痪的治疗方法分级为绿色（去做）、黄色（可能有效，并加以衡量）或红色
+          （不要做）：<a href="https://pubmed.ncbi.nlm.nih.gov/32086598/" rel="noopener noreferrer" target="_blank">Novak等，2020（PubMed）</a>。</p>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="evidence">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">什么有效</span>
+        <h2>证据支持哪些方法</h2>
+        <p class="mt-1">这是一份痉挛型双瘫治疗方法的简明指南，按研究对它们的
+            支持程度进行分组。"获得支持"是指现有的最佳证据支持去做，
+            而不是说它能治愈。</p>
+      </div>
+      <div class="container">
+        <div aria-label="How strongly research supports each therapy" class="tl" role="group">
+          <div class="tl-card tl-green">
+            <h3><span aria-hidden="true" class="tl-dot"></span>去做：获得支持</h3>
+            <ul>
+              <li>目标导向、特定任务的练习</li>
+              <li>渐进式力量训练</li>
+              <li>跑步机（±减重支持）及步态训练</li>
+              <li>肉毒杆菌毒素+主动治疗；系列石膏固定</li>
+              <li>选择性脊神经后根切断术（用于经选择的可步行双瘫患者）</li>
+              <li>踝足矫形器，与具体问题相匹配</li>
+              <li>髋关节监测；为骨骼健康进行负重</li>
+              <li>早期发现与早期干预；家长辅导</li>
+            </ul>
+          </div>
+          <div class="tl-card tl-amber">
+            <h3><span aria-hidden="true" class="tl-dot"></span>也许：尝试并衡量</h3>
+            <ul>
+              <li>功能性电刺激（足下垂）</li>
+              <li>机器人辅助步态训练（结果不一）</li>
+              <li>水中治疗／水疗</li>
+              <li>马术治疗（主要针对姿势及躯干）</li>
+              <li>改良或FES骑行</li>
+              <li>站立训练计划（针对骨骼及髋关节）</li>
+            </ul>
+          </div>
+          <div class="tl-card tl-red">
+            <h3><span aria-hidden="true" class="tl-dot"></span>存疑：益处微弱或没有益处</h3>
+            <ul>
+              <li>传统的被动NDT／Bobath</li>
+              <li>单纯的被动牵伸（针对挛缩）</li>
+              <li>感觉统合（针对运动技能）</li>
+              <li>悬吊衣治疗（Therasuit／Adeli）</li>
+              <li>高压氧；颅骶治疗</li>
+              <li>引导式教育、Vojta（针对运动结局）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container measure mx-auto">
+        <p class="note">分级总结自<a href="https://pubmed.ncbi.nlm.nih.gov/32086598/" rel="noopener noreferrer" target="_blank">Novak等，2020</a>
+          以及下文引用的Cochrane和指南综述。脑性瘫痪的证据基础大多为
+          低到中等质量，因此这些是最佳估计，而非保证。</p>
+      </div>
+    </section>
+
+    <section class="section" id="therapies">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">构成要素</span>
+        <h2>各种治疗方法详解</h2>
+        <p class="mt-1">对于患有痉挛型双瘫的孩子，一个好的方案通常会结合其中几种方法，围绕
+          家庭的目标和孩子的水平来选择。</p>
+
+        <ul class="tx-bands">
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 10.5v3M7 9v6M17 9v6M19.2 10.5v3M7 12h10"/></svg></span>
+<h3>活动与强化</h3>
+<span class="grade grade--green">获得支持</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">主动、反复地练习真实任务，是几乎所有
+                进步的引擎。</p>
+<ul>
+<li><strong>目标导向、特定任务的训练</strong>，即朝着一个选定的目标练习真实的任务
+                  （站立、迈步、攀爬）。最强有力且用途最广泛的方法。</li>
+<li><strong>渐进式力量训练</strong>：增强腿部力量<em>并不会
+                  使痉挛加重</em>（这是一个长期以来的担忧，如今已被推翻），并能改善力量、
+                  步行速度和平衡。<a href="https://pubmed.ncbi.nlm.nih.gov/34407619/" rel="noopener noreferrer" target="_blank">（荟萃分析，27项试验）</a>
+                  一点提醒：单凭力量本身并不会自动转化为更好的步行能力，因此要
+                  将其与任务练习相结合。</li>
+<li><strong>居家练习</strong>：融入
+                  日常生活的简短、规律、目标聚焦的练习，增加了使治疗有效的<em>剂量</em>。主动练习的量
+                  比治疗方法的品牌名称更重要。</li>
+</ul>
+</div>
+</li>
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4.5" r="2"/><path d="M12.5 7.5L11 13.5L8 19.5"/><path d="M11 13.5l4 2l-1.5 4.5"/><path d="M9.3 11L12.3 8.7L15 10.7"/></svg></span>
+<h3>走得更远、更轻松</h3>
+<span class="grade grade--green">获得支持</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">通过现实环境中的
+                练习，使步行更快、更稳、更省力。</p>
+<ul>
+<li><strong>跑步机训练，无论是否减重支持</strong>，对于能够迈步的孩子，这是
+                  改善步行速度排名最高的方法之一（它对
+                  耐力的影响则较不确定）。</li>
+<li><strong>平地及功能性步态训练</strong>，即在真实场所练习真实的步行；
+                  是活动能力训练的支柱。</li>
+<li><strong>有氧体能</strong>，能改善耐力、健康和参与度，并
+                  有助于抵消随时间推移变得越来越不活跃的趋势。</li>
+</ul>
+</div>
+</li>
+<li class="tx-band tx-band--care"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="6.5" width="4" height="9" rx="1" transform="rotate(45 11 11)"/><path d="M7.8 14.2L5 17"/><path d="M14.2 7.8L17 5"/><path d="M16 4L18 6"/></svg></span>
+<h3>管理痉挛</h3>
+<span class="grade grade--amber">获得支持，但需谨慎</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">缓解紧绷本身的医学治疗，与主动
+                治疗相结合。</p>
+<p>了解两种紧绷之间的区别会有帮助：<strong>痉挛</strong>，
+                即抵抗快速运动的肌肉紧绷，通常可以缓解（例如
+                通过肉毒杆菌毒素或手术）；但一旦肌肉变成固定的、缩短的
+                <strong>挛缩</strong>，那些肌张力治疗就再也无法逆转它。这就是为什么
+                <em>时机</em>很重要。这些都是需要由专科团队来决定的：</p>
+<ul>
+<li>将<strong>肉毒杆菌毒素（"Botox"）注射</strong>到特定的紧绷
+                  肌肉中，可以在几个月内缓解局部的紧绷，为主动治疗和
+                  石膏固定开启一个窗口。它在降低肌张力方面已得到充分确立，尽管它对日常
+                  <em>功能</em>的影响较不确定，且反复注射引发了关于肌肉健康的
+                  疑问，因此它被有选择性地使用。<a href="https://pubmed.ncbi.nlm.nih.gov/31591703/" rel="noopener noreferrer" target="_blank">（Cochrane综述）</a></li>
+<li><strong>选择性脊神经后根切断术（SDR）</strong>是一种一次性的脊柱手术，通过
+                  切断部分感觉神经根来永久性地降低腿部痉挛，随后是
+                  数月的强化物理治疗。在<em>经过仔细选择</em>的患有
+                  痉挛型双瘫的可步行儿童中（通常为GMFCS II–III级，约3–10岁），它可以带来持久的
+                  痉挛缓解，并且在精心挑选的候选者中，有报告称在多年后
+                  步行能力和独立性有所改善。<a href="https://pubmed.ncbi.nlm.nih.gov/23713680/" rel="noopener noreferrer" target="_blank">（长期随访）</a>
+                  由于它是不可逆的，并且与任何脊柱手术一样带有风险（感觉、
+                  膀胱或肠道功能的改变，以及后期的脊柱问题如脊柱侧弯），它
+                  仅在经过仔细的团队评估后才会提供，而与单纯强化物理治疗的长期
+                  头对头比较仍然有限。</li>
+<li><strong>系列石膏固定</strong>使用一系列石膏，轻柔地拉长紧绷的小腿；
+                  对于早期、仍然灵活的紧绷有效，常在肉毒杆菌毒素之后使用。</li>
+<li><strong>鞘内巴氯芬和口服药物</strong>主要用于更严重的、
+                  全身性的痉挛；这是一项医学决定。</li>
+</ul>
+<p class="note">关于管理儿童痉挛：<a href="https://www.nice.org.uk/guidance/cg145" rel="noopener noreferrer" target="_blank">NICE指南CG145</a>。</p>
+</div>
+</li>
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3.5v9.5q0 3 -3 3h-7q-2 0 -2 -2"/><path d="M12 3.5v9.5L5 14"/><path d="M12 6.5h5M12 10.5h5"/></svg></span>
+<h3>支具与器具</h3>
+<span class="grade grade--green">获得支持</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">合适的支具或助行器具，与具体问题相匹配。</p>
+<ul>
+<li><strong>踝足矫形器（AFOs）</strong>能改善步行，但其<em>类型</em>
+                  应当契合问题：用于足下垂的实体式或片簧式AFO；当
+                  孩子需要屈踝以完成坐到站和上下楼梯时的<strong>铰链式</strong>
+                  AFO；用于灵活性蹲伏步态的<strong>地面反作用力</strong>AFO。<a href="https://pubmed.ncbi.nlm.nih.gov/29714066/" rel="noopener noreferrer" target="_blank">（AFO荟萃分析，56项研究）</a></li>
+<li><strong>助行器、步态训练器和轮椅</strong>：适合
+                  孩子水平的助行器具能够支持独立性和参与度。在长距离时使用轮椅
+                  并不是"放弃"步行；它能为重要的事情节省体力。</li>
+<li>"降低肌张力"的支具功能和夜间夹板的<strong>证据
+                  薄弱</strong>，因此提出质疑是合理的。</li>
+</ul>
+</div>
+</li>
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="8.7" y1="15.3" x2="15.3" y2="8.7"/><circle cx="7.4" cy="14.4" r="1.7"/><circle cx="9.6" cy="16.6" r="1.7"/><circle cx="14.4" cy="7.4" r="1.7"/><circle cx="16.6" cy="9.6" r="1.7"/></svg></span>
+<h3>保护髋关节与骨骼</h3>
+<span class="grade grade--green">获得支持</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">在孩子成长过程中保持髋关节在位、骨骼强健。</p>
+<ul>
+<li><strong>髋关节监测</strong>：按GMFCS
+                  级别设定的时间表定期进行髋关节X光检查，能在髋关节移位最易治疗的早期
+                  发现它。全人群范围的监测
+                  计划已显著减少了髋关节脱位。<a href="https://www.aacpdm.org/publications/care-pathways/hip-surveillance-in-cerebral-palsy" rel="noopener noreferrer" target="_blank">（AACPDM诊疗路径）</a></li>
+<li><strong>负重／站立、维生素D和钙</strong>对
+                  骨骼强度很重要，尤其对于步行较少的孩子。（对于COPB2的骨骼类型OPDD，请
+                  与骨骼专科医生共同规划负荷。）</li>
+<li><strong>预防挛缩</strong>：主动运动、强化、石膏固定和
+                  站立训练计划比被动牵伸更有效，被动牵伸单凭其本身并不能预防
+                  紧绷。</li>
+</ul>
+</div>
+</li>
+</ul>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="child">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">了解起点</span>
+        <h2>了解您的孩子</h2>
+
+        <h3 class="mt-3">GMFCS：他们目前所处的阶段</h3>
+        <p class="mt-1">粗大运动功能分级系统用五个级别描述孩子如何活动。
+          痉挛型双瘫通常为I–III级（能步行，可借助或不借助辅助器具）。它有助于
+          团队设定切合实际的目标、判断髋关节风险，并决定谁可能从手术等方案中获益。
+          它是一个起点，<strong>而不是你所要努力达成目标的上限</strong>。</p>
+        <p class="note">大致而言，在约6–12岁：</p>
+        <ul class="gmfcs-scale">
+          <li><span class="gmfcs-lvl">I</span><span>到处都能走；可能觉得跑步、速度或平衡较难。</span></li>
+          <li><span class="gmfcs-lvl">II</span><span>在大多数地方能走；上下楼梯时可能扶栏杆，并觉得长距离、不平整的地面或人群较难。</span></li>
+          <li><span class="gmfcs-lvl">III</span><span>借助手持辅助器具（如助行器或手杖）步行，长距离时可能使用轮椅。</span></li>
+          <li class="gmfcs-dim"><span class="gmfcs-lvl">IV–V</span><span>主要依靠轮椅移动（在痉挛型双瘫中较少见）。</span></li>
+        </ul>
+        <p class="note"><a href="https://canchild.ca/en/resources/42-gross-motor-function-classification-system-expanded-revised-gmfcs-e-r" rel="noopener noreferrer" target="_blank">GMFCS详解（CanChild）</a></p>
+
+        <h3 class="mt-3">目标，而非"正常"</h3>
+        <p class="mt-1">现代治疗设定<strong>由家庭选择的具体目标</strong>（例如
+          "安全地走过厨房"），并练习那个确切的任务。目标
+          用简单的工具（如目标达成量表）来追踪，这样你就能看出治疗是否有效
+          并加以调整。</p>
+
+        <h3 class="mt-3">最重要的是什么</h3>
+        <p class="mt-1">一个让治疗瞄准美好生活而不仅仅是身体力学的简单方法：孩子
+          如何完成某件事，比它看起来有多"正常"更重要。</p>
+      </div>
+    </section>
+
+    <section class="section" id="early">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">时机很重要</span>
+        <h2>早期窗口期</h2>
+        <p class="mt-1">脑性瘫痪及相关运动障碍现在可以在<strong>约六个月
+          龄之前</strong>，通过结合运动评估（全身运动评估）、简短的神经系统检查（
+          HINE）和MRI被检测出来，远早于传统的"观望"式诊断。
+          <a href="https://pubmed.ncbi.nlm.nih.gov/28715518/" rel="noopener noreferrer" target="_blank">（Novak等，2017）</a>
+          那个早期窗口正是大脑最具适应性的时候，因此尽早开始主动的、丰富化的、由家长实施的
+          练习，如<strong>GAME</strong>（目标–活动–运动
+          丰富化）这样的计划，能最大限度地利用它。<a href="https://pubmed.ncbi.nlm.nih.gov/33999106/" rel="noopener noreferrer" target="_blank">（早期干预指南）</a></p>
+        <p><strong>家长辅导</strong>，向家庭展示如何将练习融入日常玩耍，
+          以及对照护者自身身心健康的支持，本身就是良好
+          照护中有循证依据的组成部分。</p>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="team">
+      <div class="container measure mx-auto">
+          <span class="eyebrow">携手合作</span>
+          <h2>与您的团队合作并寻求帮助</h2>
+          <p class="mt-1">一个好的治疗方案是您、您的孩子以及帮助你们的人之间的伙伴关系。</p>
+
+          <h3 class="mt-3">是什么让它奏效</h3>
+          <ul class="list-check mt-1">
+            <li>共同<strong>设定2–3个具体目标</strong>，并不时回顾它们。</li>
+            <li><strong>询问剂量</strong>，因为有意义的改变通常需要真实的练习量，
+              其中大部分在家中进行，而不是每周一次短暂的诊所就诊。</li>
+            <li>用标准工具（例如粗大运动功能量表
+              或目标达成量表）<strong>衡量进展</strong>，这样你就能分辨出什么在起作用。</li>
+            <li><strong>组建团队</strong>：物理治疗在此处主导，同时配合作业治疗
+              （日常任务、手部、坐姿）、必要时的言语和喂养治疗、矫形器，以及一位
+              负责痉挛和骨骼健康的医生。</li>
+          </ul>
+
+          <h3 class="mt-3">在哪里寻求帮助</h3>
+      </div>
+      <div class="container">
+        <div class="grid grid--3 mt-3">
+          <article class="card">
+            <h3>如何开始（美国）</h3>
+            <p>在每个州，根据IDEA Part C，都可以获得免费或低成本的<strong>早期干预</strong>
+              （从出生到3岁）。家长提出申请或儿科医生转诊即可启动一次免费的
+              评估和一份个性化的支持计划；从3岁起，服务通过学校
+              系统继续。</p>
+            <ul class="mt-1">
+              <li><a href="https://www.parentcenterhub.org/ei-overview/" rel="noopener noreferrer" target="_blank">早期干预：概述</a></li>
+              <li><a href="https://ectacenter.org/partc/partc.asp" rel="noopener noreferrer" target="_blank">查找您所在州的项目</a></li>
+            </ul>
+            <p class="note">在美国以外，请让您的儿科医生或临床遗传学家将您转介至当地的
+              儿童发育、早期干预或物理治疗服务机构。</p>
+          </article>
+          <article class="card card--accent">
+            <h3>寻找治疗师</h3>
+            <ul class="mt-1">
+              <li><a href="https://pediatricapta.org/consumers/" rel="noopener noreferrer" target="_blank">APTA Pediatrics</a>：物理治疗、家庭资源</li>
+              <li><a href="https://www.aota.org/" rel="noopener noreferrer" target="_blank">AOTA</a>：作业治疗</li>
+              <li><a href="https://www.asha.org/" rel="noopener noreferrer" target="_blank">ASHA</a>：言语语言与喂养治疗</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>指南与延伸阅读</h3>
+            <ul class="mt-1">
+              <li><a href="https://pubmed.ncbi.nlm.nih.gov/32086598/" rel="noopener noreferrer" target="_blank">Novak关于什么有效的"红绿灯"综述</a></li>
+              <li><a href="https://www.nice.org.uk/guidance/cg145" rel="noopener noreferrer" target="_blank">NICE CG145：19岁以下的痉挛</a></li>
+              <li><a href="https://www.nice.org.uk/guidance/ng62" rel="noopener noreferrer" target="_blank">NICE NG62：脑性瘫痪</a></li>
+              <li><a href="https://www.aacpdm.org/publications/care-pathways/" rel="noopener noreferrer" target="_blank">AACPDM诊疗路径</a></li>
+              <li><a href="https://canchild.ca/" rel="noopener noreferrer" target="_blank">CanChild：GMFCS及家庭工具</a></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+      <div class="container measure mx-auto">
+        <p class="note mt-3">无论诊断结果如何，治疗方案都应当
+          <strong>个性化</strong>，这些资源是一个起点，而非一份处方。</p>
+      </div>
+    </section>
+
+    <section class="section section--teal">
+      <div class="container cta-banner">
+        <h2>探索COPB2.org的更多内容</h2>
+        <div class="btn-row btn-row--center mt-2">
+          <a class="btn btn--light" href="copb2.html">COPB2</a>
+
+          <a class="btn btn--light" href="research.html">研究</a>
+          <a class="btn btn--light" href="glossary.html">术语表</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a aria-label="COPB2.org 首页" class="brand" href="index.html"><img alt="" class="brand__mark" height="36" src="../assets/favicon.png" width="36"/> <span class="brand__name" style="color:#fff">COPB2.org</span></a>
+          <p>一个关于 COPB2 基因及其相关罕见疾病的独立、非营利信息资源。</p>
+        </div>
+        <div class="footer">
+          <h4>探索</h4>
+          <ul>
+            <li><a href="about.html">关于</a></li>
+            <li><a href="copb2.html">COPB2</a></li>
+
+            <li><a href="research.html">研究</a></li>
+            <li><a href="therapy.html">治疗</a></li>
+            <li><a href="glossary.html">术语表</a></li>
+            <li><a href="community.html">社区</a></li>
+          </ul>
+        </div>
+        <div class="footer">
+          <h4>可靠来源</h4>
+          <ul>
+            <li><a href="https://omim.org/entry/606990" rel="noopener noreferrer" target="_blank">OMIM — COPB2</a></li>
+            <li><a href="https://www.ncbi.nlm.nih.gov/gene/9276" rel="noopener noreferrer" target="_blank">NCBI Gene 9276</a></li>
+            <li><a href="https://medlineplus.gov/genetics/" rel="noopener noreferrer" target="_blank">MedlinePlus Genetics</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year="">2026</span> COPB2.org. 一个非营利性信息资源。</span>
+        <span>并非医疗建议 · <a href="therapy.html#disclaimer">阅读我们的免责声明</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/lang-nav.js"></script>
+
+  <!-- On-this-page scroll-spy (progressive enhancement) -->
+  <script>
+  (function () {
+    var nav = document.querySelector('nav.toc');
+    if (!nav) return;
+    var links = {};
+    var sections = [];
+    nav.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      var s = document.getElementById(id);
+      if (s) { links[id] = a; sections.push(s); }
+    });
+    if (!sections.length) return;
+    var current = null, ticking = false;
+    function update() {
+      ticking = false;
+      var activeId = null;
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i].getBoundingClientRect().top <= 100) activeId = sections[i].id;
+        else break;
+      }
+      var next = activeId ? links[activeId] : null;
+      if (next !== current) {
+        if (current) current.removeAttribute('aria-current');
+        current = next;
+        if (current) current.setAttribute('aria-current', 'location');
+      }
+    }
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    update();
+  })();
+  </script>
+
+
+</body></html>

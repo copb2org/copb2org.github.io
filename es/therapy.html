@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Terapia</title>
+  <meta content="Fisioterapia basada en la evidencia para niños con espasticidad y diplejía espástica (como en la parálisis cerebral): qué funciona, el semáforo de los tratamientos, la intervención temprana, las ortesis y cómo encontrar ayuda. Información general y con fuentes, no consejo médico." name="description"/>
+  <meta content="#12807e" name="theme-color"/>
+  <link href="../assets/favicon.png" rel="icon" type="image/png"/>
+  <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="../css/styles.css" rel="stylesheet"/>
+
+  <meta content="website" property="og:type"/>
+  <meta content="Terapia" property="og:title"/>
+  <meta content="COPB2.org" property="og:site_name"/>
+  <meta content="Fisioterapia basada en la evidencia para niños con espasticidad y diplejía espástica (como en la parálisis cerebral): qué funciona, el semáforo de los tratamientos, la intervención temprana, las ortesis y cómo encontrar ayuda. Información general y con fuentes, no consejo médico." property="og:description"/>
+  <meta content="https://copb2org.github.io/assets/og-image.png" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="https://copb2org.github.io/es/therapy.html" property="og:url"/>
+  <link href="https://copb2org.github.io/es/therapy.html" rel="canonical"/>
+  <meta content="Terapia" name="twitter:title"/>
+  <meta content="Fisioterapia basada en la evidencia para niños con espasticidad y diplejía espástica (como en la parálisis cerebral): qué funciona, el semáforo de los tratamientos, la intervención temprana, las ortesis y cómo encontrar ayuda. Información general y con fuentes, no consejo médico." name="twitter:description"/>
+  <meta content="https://copb2org.github.io/assets/og-image.png" name="twitter:image"/>
+  <meta content="1200" property="og:image:width"/>
+  <meta content="630" property="og:image:height"/>
+  <style>
+    /* Therapy page (page-scoped) */
+    main section[id]{scroll-margin-top:84px}
+    /* Evidence traffic-light */
+    .tl{display:grid;gap:1rem;margin:1.4rem 0 .6rem}
+    @media(min-width:760px){.tl{grid-template-columns:repeat(3,1fr)}}
+    .tl-card{border:1px solid var(--line);border-radius:14px;padding:1rem 1.15rem;background:var(--surface)}
+    .tl-card h3{margin:.1rem 0 .15rem;font-size:1.04rem;display:flex;align-items:center;gap:.5rem}
+    .tl-card ul{margin:.4rem 0 0;padding-left:1.15rem}
+    .tl-card li{margin:.34rem 0;line-height:1.5;font-size:.92rem}
+    .tl-dot{width:.85rem;height:.85rem;border-radius:50%;display:inline-block;flex:0 0 auto}
+    .tl-green{background:#eef7f1}
+    .tl-green .tl-dot{background:#2f9e63}
+    .tl-amber{background:#fdf4ea}
+    .tl-amber .tl-dot{background:var(--amber-500)}
+    .tl-red{background:var(--coral-100)}
+    .tl-red .tl-dot{background:var(--coral-600)}
+    .grade{font-size:.7rem;font-weight:700;letter-spacing:.02em;padding:.12rem .5rem;border-radius:999px;white-space:nowrap;vertical-align:middle;margin-left:.4rem}
+    .grade--green{background:#e3f3ea;color:#1e6b43}
+    .grade--amber{background:#fdeedd;color:#8a5316}
+    .grade--red{background:var(--coral-100);color:#7a2f24}
+    /* Therapy "building blocks": icon header bands */
+    .tx-bands{list-style:none;margin:1.7rem 0 0;padding:0;display:flex;flex-direction:column;gap:1.1rem}
+    .tx-band{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
+    .tx-band__head{display:flex;align-items:center;gap:.7rem;padding:.8rem 1.1rem;background:var(--teal-50)}
+    .tx-band__head h3{margin:0;font-size:1.1rem;color:var(--teal-900)}
+    .tx-ico{flex:0 0 auto;width:1.85rem;height:1.85rem;color:var(--teal-700);display:flex}
+    .tx-ico svg{width:100%;height:100%}
+    .tx-band__head .grade{margin-left:auto}
+    .tx-band--care .tx-band__head{background:#fdf4ea}
+    .tx-band--care .tx-ico{color:var(--amber-500)}
+    .tx-band--care .tx-band__head h3{color:#8a5316}
+    .tx-band__body{padding:.9rem 1.1rem 1.1rem}
+    .pt-step__lead{font-weight:600;color:var(--ink-soft);margin:0 0 .5rem}
+    .tx-band__body>p{margin:.55rem 0 0}
+    .tx-band__body ul{margin:.55rem 0 0;padding-left:1.15rem}
+    .tx-band__body li{margin:.38rem 0;line-height:1.55}
+    .tx-band__body .note{margin-top:.65rem}
+    /* Traffic-light: non-colour glyph cue + AA-readable caption on the red card */
+    .tl-dot{position:relative}
+    .tl-green .tl-dot::before,.tl-amber .tl-dot::before,.tl-red .tl-dot::before{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.6rem;font-weight:700;line-height:1}
+    .tl-green .tl-dot::before{content:"\2713"}
+    .tl-amber .tl-dot::before{content:"~"}
+    .tl-red .tl-dot::before{content:"?"}
+    /* GMFCS level scale */
+    .gmfcs-scale{list-style:none;margin:.5rem 0 .5rem;padding:0;display:grid;gap:.85rem}
+    .gmfcs-scale li{display:grid;grid-template-columns:auto 1fr;gap:.85rem;align-items:start}
+    .gmfcs-lvl{display:flex;align-items:center;justify-content:center;min-width:2.3rem;height:2.3rem;padding:0 .5rem;border-radius:1.15rem;background:var(--teal-600);color:#fff;font-weight:700;font-size:.82rem;flex:0 0 auto}
+    .gmfcs-scale li>span:last-child{padding-top:.3rem;line-height:1.45;font-size:.92rem}
+    .gmfcs-scale .gmfcs-dim .gmfcs-lvl{background:transparent;color:var(--muted);border:1.5px solid var(--line)}
+    .gmfcs-scale .gmfcs-dim>span:last-child{color:var(--muted)}
+    /* On-this-page active link */
+    nav.toc a[aria-current="location"]{font-weight:700;color:var(--teal-700)}
+  </style>
+<link href="https://copb2org.github.io/therapy.html" hreflang="en" rel="alternate"/><link href="https://copb2org.github.io/zh/therapy.html" hreflang="zh" rel="alternate"/><link href="https://copb2org.github.io/es/therapy.html" hreflang="es" rel="alternate"/><link href="https://copb2org.github.io/fr/therapy.html" hreflang="fr" rel="alternate"/><link href="https://copb2org.github.io/ja/therapy.html" hreflang="ja" rel="alternate"/><link href="https://copb2org.github.io/therapy.html" hreflang="x-default" rel="alternate"/></head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a aria-label="Inicio de COPB2.org" class="brand" href="index.html">
+        <img alt="" class="brand__mark" height="36" src="../assets/favicon.png" width="36"/>
+        <span class="brand__name">COPB2<b>.org</b></span>
+      </a>
+      <button aria-controls="nav-links" aria-expanded="false" aria-label="Abrir menú" data-label-open="Abrir menú" data-label-close="Cerrar menú" class="nav__toggle">
+        <svg aria-hidden="true" class="icon-open" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+        <svg aria-hidden="true" class="icon-close" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24"><line x1="6" x2="18" y1="6" y2="18"></line><line x1="6" x2="18" y1="18" y2="6"></line></svg>
+      </button>
+      <nav aria-label="Principal">
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Acerca de</a></li>
+        <li><a href="copb2.html">COPB2</a></li>
+        <li><a href="community.html">Comunidad</a></li>
+
+        <li><a href="research.html">Investigación</a></li>
+        <li><a aria-current="page" href="therapy.html">Terapia</a></li>
+        <li><a href="glossary.html">Glosario</a></li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">Inicio</a> / Terapia</p>
+        <span class="eyebrow">Terapia y rehabilitación</span>
+        <h1>Terapia para la diplejía espástica</h1>
+        <p class="lead measure">La diplejía espástica, es decir, piernas rígidas y tensas que dificultan ponerse de pie y caminar,
+          es uno de los patrones más frecuentes en la parálisis cerebral. La fisioterapia es la principal vía por la que
+          los niños ganan fuerza, movilidad e independencia, y la evidencia vuelve una y otra vez a una idea por encima
+          de todas: <strong>la práctica activa, dirigida a objetivos y realizada con frecuencia supera al tratamiento pasivo</strong>.</p>
+      </div>
+    </section>
+
+    <!-- Medical disclaimer / honest note -->
+    <section class="section section--tight" id="disclaimer">
+      <div class="container measure mx-auto">
+        <p class="note"><strong>No es consejo médico.</strong> Hay mucho que puede ayudar, y los
+          principios bien estudiados de la terapia para la diplejía espástica, es decir, activa, dirigida a objetivos, temprana e
+          individualizada, se transfieren bien, aunque todavía no exista un protocolo específico para COPB2. Como
+          COPB2 es genética y puede comportarse de forma distinta a la parálisis cerebral por lesión cerebral de la que procede esta
+          evidencia, un fisioterapeuta cualificado debe adaptar todo a su hijo y confirmar que nada de lo aquí descrito sea
+          inadecuado, por ejemplo, antes de un fortalecimiento vigoroso o de una cirugía y, en la forma ósea
+          (OPDD), cómo cargar los huesos de forma segura. Esta página es información general con fines educativos, no un plan de
+          tratamiento.</p>
+      </div>
+    </section>
+
+    <!-- On this page -->
+    <section class="section section--tight">
+      <div class="container measure mx-auto">
+        <h2 id="on-this-page">En esta página</h2>
+        <nav aria-labelledby="on-this-page" class="toc">
+          <ul class="list-check mt-1">
+            <li><a href="#principle">La idea que hace que la terapia funcione</a></li>
+            <li><a href="#evidence">Qué respalda la evidencia</a></li>
+            <li><a href="#therapies">Las terapias, explicadas</a></li>
+            <li><a href="#child">Conozca a su hijo</a></li>
+            <li><a href="#early">La ventana temprana</a></li>
+            <li><a href="#team">Trabajar con su equipo y encontrar ayuda</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- THE ONE IDEA -->
+    <section class="section" id="principle">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">La idea central</span>
+        <h2>La idea que hace que la terapia funcione</h2>
+        <p class="mt-1">En todas las revisiones de alta calidad, las terapias que de verdad mejoran el movimiento comparten
+          un mismo mecanismo: <strong>el niño realiza el movimiento por sí mismo, lo practica mucho y trabaja hacia un
+          objetivo real que le importa</strong>, como subir las escaleras, seguir el ritmo en el parque o caminar
+          hasta clase. La práctica activa, repetida y significativa es lo que impulsa al cerebro a reorganizarse (lo que los científicos
+          llaman neuroplasticidad dependiente de la experiencia).</p>
+        <p>El otro lado es igual de importante. <strong>El tratamiento pasivo, con las manos</strong>, en el que un
+          terapeuta mueve al niño o intenta “normalizar” el tono muscular mientras el niño permanece
+          pasivo, <strong>no funciona</strong>. Una prueba útil: si una terapia consiste sobre todo en algo que se hace
+          <em>a</em> su hijo, en lugar de algo que su hijo hace activamente, es razonable pedir la
+          evidencia.</p>
+        <p class="note">El mapa de referencia del campo es la revisión del “semáforo” de Novak, que
+          clasifica los tratamientos de la parálisis cerebral en verde (hágalo), amarillo (probablemente, y mídalo) o rojo
+          (no lo haga): <a href="https://pubmed.ncbi.nlm.nih.gov/32086598/" rel="noopener noreferrer" target="_blank">Novak y cols., 2020 (PubMed)</a>.</p>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="evidence">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">Qué funciona</span>
+        <h2>Qué respalda la evidencia</h2>
+        <p class="mt-1">Un mapa rápido de los enfoques terapéuticos para la diplejía espástica, agrupados según el grado en que la
+            investigación los respalda. “Respaldado” significa que la mejor evidencia disponible avala hacerlo,
+            no que sea una cura.</p>
+      </div>
+      <div class="container">
+        <div aria-label="How strongly research supports each therapy" class="tl" role="group">
+          <div class="tl-card tl-green">
+            <h3><span aria-hidden="true" class="tl-dot"></span>Hágalo: Respaldado</h3>
+            <ul>
+              <li>Práctica dirigida a objetivos y específica de la tarea</li>
+              <li>Entrenamiento de fuerza progresivo</li>
+              <li>Cinta de marcha (± soporte del peso corporal) y entrenamiento de la marcha</li>
+              <li>Toxina botulínica + terapia activa; enyesados seriados</li>
+              <li>Rizotomía dorsal selectiva (para diplejía deambulante seleccionada)</li>
+              <li>Ortesis tobillo-pie, adaptadas al problema</li>
+              <li>Vigilancia de cadera; carga de peso para el hueso</li>
+              <li>Detección temprana e intervención temprana; orientación a los padres</li>
+            </ul>
+          </div>
+          <div class="tl-card tl-amber">
+            <h3><span aria-hidden="true" class="tl-dot"></span>Quizás: Pruébelo y mídalo</h3>
+            <ul>
+              <li>Estimulación eléctrica funcional (pie caído)</li>
+              <li>Entrenamiento robótico de la marcha (resultados dispares)</li>
+              <li>Terapia acuática / hidroterapia</li>
+              <li>Hipoterapia (sobre todo postura y tronco)</li>
+              <li>Ciclismo adaptado o con FES</li>
+              <li>Programas de bipedestación (para hueso y caderas)</li>
+            </ul>
+          </div>
+          <div class="tl-card tl-red">
+            <h3><span aria-hidden="true" class="tl-dot"></span>Dudoso: Beneficio escaso o nulo</h3>
+            <ul>
+              <li>NDT / Bobath pasivo clásico</li>
+              <li>Estiramiento pasivo solo (para contracturas)</li>
+              <li>Integración sensorial (para habilidades motoras)</li>
+              <li>Terapia con traje (Therasuit / Adeli)</li>
+              <li>Oxígeno hiperbárico; terapia craneosacral</li>
+              <li>Educación conductiva, Vojta (para resultados motores)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container measure mx-auto">
+        <p class="note">Grados resumidos a partir de <a href="https://pubmed.ncbi.nlm.nih.gov/32086598/" rel="noopener noreferrer" target="_blank">Novak y cols., 2020</a>
+          y las revisiones Cochrane y de guías citadas más abajo. La base de evidencia de la parálisis cerebral es en su mayoría
+          de calidad baja a moderada, por lo que se trata de las mejores estimaciones, no de garantías.</p>
+      </div>
+    </section>
+
+    <section class="section" id="therapies">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">Los pilares</span>
+        <h2>Las terapias, explicadas</h2>
+        <p class="mt-1">Para un niño con diplejía espástica, un buen plan suele combinar varias de estas, elegidas
+          en torno a los objetivos de la familia y al nivel del niño.</p>
+
+        <ul class="tx-bands">
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 10.5v3M7 9v6M17 9v6M19.2 10.5v3M7 12h10"/></svg></span>
+<h3>Moverse y fortalecerse</h3>
+<span class="grade grade--green">Respaldado</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">La práctica activa y repetida de tareas reales es el motor de casi todo el
+                progreso.</p>
+<ul>
+<li><strong>Entrenamiento dirigido a objetivos y específico de la tarea</strong>: practicar la tarea real
+                  (ponerse de pie, dar un paso, trepar) hacia un objetivo elegido. El enfoque más sólido y de utilidad más amplia.</li>
+<li><strong>Entrenamiento de fuerza progresivo</strong>: desarrollar la fuerza de las piernas <em>no
+                  empeora la espasticidad</em> (un temor de larga data, ahora desmentido) y mejora la fuerza,
+                  la velocidad de la marcha y el equilibrio. <a href="https://pubmed.ncbi.nlm.nih.gov/34407619/" rel="noopener noreferrer" target="_blank">(metaanálisis, 27 ensayos)</a>
+                  Una advertencia: la fuerza por sí sola no se convierte automáticamente en una mejor marcha, así que combínela
+                  con la práctica de tareas.</li>
+<li><strong>Práctica en casa</strong>: una práctica breve, regular y centrada en objetivos integrada en
+                  la vida diaria aporta la <em>dosis</em> que hace que la terapia funcione. La cantidad de práctica activa
+                  importa más que la marca de la terapia.</li>
+</ul>
+</div>
+</li>
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4.5" r="2"/><path d="M12.5 7.5L11 13.5L8 19.5"/><path d="M11 13.5l4 2l-1.5 4.5"/><path d="M9.3 11L12.3 8.7L15 10.7"/></svg></span>
+<h3>Caminar más lejos, con más facilidad</h3>
+<span class="grade grade--green">Respaldado</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">Hacer que caminar sea más rápido, más estable y menos agotador mediante práctica
+                en el mundo real.</p>
+<ul>
+<li><strong>Entrenamiento en cinta de marcha, con o sin soporte del peso corporal</strong>, que está entre los
+                  enfoques mejor clasificados para mejorar la velocidad de la marcha en niños que pueden dar pasos (su efecto
+                  sobre la resistencia es menos cierto).</li>
+<li><strong>Entrenamiento de la marcha en suelo y funcional</strong>: practicar la marcha real
+                  en lugares reales; la columna vertebral del trabajo de movilidad.</li>
+<li><strong>Condición física aeróbica</strong>: mejora la resistencia, la salud y la participación, y
+                  ayuda a contrarrestar la tendencia a volverse menos activo con el tiempo.</li>
+</ul>
+</div>
+</li>
+<li class="tx-band tx-band--care"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="6.5" width="4" height="9" rx="1" transform="rotate(45 11 11)"/><path d="M7.8 14.2L5 17"/><path d="M14.2 7.8L17 5"/><path d="M16 4L18 6"/></svg></span>
+<h3>Manejar la espasticidad</h3>
+<span class="grade grade--amber">Respaldado, con cautela</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">Tratamientos médicos que alivian la propia tensión, combinados con terapia
+                activa.</p>
+<p>Conviene conocer la diferencia entre dos tipos de tensión: la <strong>espasticidad</strong>,
+                es decir, tensión muscular que se resiste al movimiento rápido, a menudo puede aliviarse (por ejemplo,
+                con toxina botulínica o cirugía); pero una vez que un músculo se convierte en una
+                <strong>contractura</strong> fija y acortada, esos tratamientos del tono ya no pueden revertirla. Por eso
+                el <em>momento</em> importa. Estas son decisiones para un equipo especializado:</p>
+<ul>
+<li>Las inyecciones de <strong>toxina botulínica (“Botox”)</strong> en músculos tensos
+                  concretos pueden aliviar la tensión focal durante unos meses, abriendo una ventana para la terapia activa y
+                  el enyesado. Está bien establecida para reducir el tono, aunque su efecto sobre la
+                  <em>función</em> cotidiana es menos cierto y las inyecciones repetidas plantean dudas sobre la salud muscular,
+                  por lo que se usa de forma selectiva. <a href="https://pubmed.ncbi.nlm.nih.gov/31591703/" rel="noopener noreferrer" target="_blank">(revisión Cochrane)</a></li>
+<li>La <strong>rizotomía dorsal selectiva (SDR)</strong> es una operación espinal única que
+                  reduce de forma permanente la espasticidad de las piernas al cortar algunas de las raíces nerviosas sensitivas, seguida de
+                  meses de fisioterapia intensiva. En niños que caminan, <em>cuidadosamente seleccionados</em>, con
+                  diplejía espástica (a menudo GMFCS II–III, en torno a los 3–10 años), puede aportar un alivio duradero de la
+                  espasticidad y, en candidatos bien elegidos, mejoras en la marcha y la independencia descritas
+                  años después. <a href="https://pubmed.ncbi.nlm.nih.gov/23713680/" rel="noopener noreferrer" target="_blank">(seguimiento a largo plazo)</a>
+                  Como es irreversible y, como cualquier cirugía espinal, conlleva riesgos (cambios en la
+                  sensibilidad, en la función vesical o intestinal, y problemas de columna posteriores como la escoliosis), solo se
+                  ofrece tras una cuidadosa evaluación del equipo, y las comparaciones directas a largo plazo con la
+                  fisioterapia intensiva sola siguen siendo limitadas.</li>
+<li><strong>Enyesado seriado</strong>: una serie de yesos que alargan suavemente una pantorrilla tensa;
+                  eficaz para la tensión temprana, aún flexible, a menudo usado después de la toxina botulínica.</li>
+<li><strong>Baclofeno intratecal y medicamentos orales</strong>: principalmente para la espasticidad más
+                  grave y de todo el cuerpo; una decisión médica.</li>
+</ul>
+<p class="note">Sobre el manejo de la espasticidad en niños: <a href="https://www.nice.org.uk/guidance/cg145" rel="noopener noreferrer" target="_blank">guía NICE CG145</a>.</p>
+</div>
+</li>
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3.5v9.5q0 3 -3 3h-7q-2 0 -2 -2"/><path d="M12 3.5v9.5L5 14"/><path d="M12 6.5h5M12 10.5h5"/></svg></span>
+<h3>Ortesis y equipamiento</h3>
+<span class="grade grade--green">Respaldado</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">La ortesis o ayuda a la movilidad adecuada, adaptada al problema concreto.</p>
+<ul>
+<li>Las <strong>ortesis tobillo-pie (AFOs)</strong> mejoran la marcha, pero el <em>tipo</em>
+                  debe ajustarse al problema: una AFO sólida o de lámina elástica para el pie caído; una AFO
+                  <strong>articulada</strong> cuando el niño necesita flexionar el tobillo para pasar de sentado a de pie y subir escaleras; una AFO
+                  de <strong>reacción al suelo</strong> para una flexión de rodillas flexible. <a href="https://pubmed.ncbi.nlm.nih.gov/29714066/" rel="noopener noreferrer" target="_blank">(metaanálisis de AFO, 56 estudios)</a></li>
+<li><strong>Andadores, entrenadores de marcha y sillas de ruedas</strong>: la ayuda a la movilidad adecuada al
+                  nivel del niño favorece la independencia y la participación. Usar una silla de ruedas para
+                  las distancias no es “rendirse” a caminar; ahorra energía para lo que importa.</li>
+<li>Las características de las ortesis “reductoras del tono” y las férulas nocturnas tienen <strong>evidencia
+                  escasa</strong>, así que es razonable cuestionarlas.</li>
+</ul>
+</div>
+</li>
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="8.7" y1="15.3" x2="15.3" y2="8.7"/><circle cx="7.4" cy="14.4" r="1.7"/><circle cx="9.6" cy="16.6" r="1.7"/><circle cx="14.4" cy="7.4" r="1.7"/><circle cx="16.6" cy="9.6" r="1.7"/></svg></span>
+<h3>Proteger las caderas y los huesos</h3>
+<span class="grade grade--green">Respaldado</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">Mantenga las caderas en su sitio y los huesos fuertes a medida que su hijo crece.</p>
+<ul>
+<li><strong>Vigilancia de cadera</strong>: radiografías de cadera periódicas, según un calendario fijado por el
+                  nivel GMFCS, detectan pronto el desplazamiento de la cadera, cuando es más tratable. Los programas de vigilancia
+                  a nivel poblacional han reducido drásticamente las luxaciones de cadera. <a href="https://www.aacpdm.org/publications/care-pathways/hip-surveillance-in-cerebral-palsy" rel="noopener noreferrer" target="_blank">(vía de atención de la AACPDM)</a></li>
+<li><strong>Carga de peso / bipedestación, vitamina D y calcio</strong> son importantes para
+                  la fortaleza ósea, especialmente en niños que caminan menos. (Para la forma ósea de COPB2, OPDD, planifique
+                  la carga junto con un especialista en huesos.)</li>
+<li><strong>Prevención de contracturas</strong>: el movimiento activo, el fortalecimiento, el enyesado y los
+                  programas de bipedestación hacen más que el estiramiento pasivo, que por sí solo no previene la
+                  tensión.</li>
+</ul>
+</div>
+</li>
+</ul>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="child">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">Conozca el punto de partida</span>
+        <h2>Conozca a su hijo</h2>
+
+        <h3 class="mt-3">GMFCS: Dónde está ahora</h3>
+        <p class="mt-1">El Sistema de Clasificación de la Función Motora Gruesa describe cómo se mueve un niño, en cinco
+          niveles. La diplejía espástica suele ser de los niveles I–III (caminar, con o sin ayudas). Ayuda
+          al equipo a fijar objetivos realistas, valorar el riesgo de cadera y decidir quién podría beneficiarse de opciones como la cirugía.
+          Es un punto de partida, <strong>no un techo</strong> de aquello hacia lo que trabajar.</p>
+        <p class="note">A grandes rasgos, en torno a los 6–12 años:</p>
+        <ul class="gmfcs-scale">
+          <li><span class="gmfcs-lvl">I</span><span>Camina por todas partes; puede que le resulten más difíciles correr, la velocidad o el equilibrio.</span></li>
+          <li><span class="gmfcs-lvl">II</span><span>Camina en la mayoría de los lugares; puede sujetarse al pasamanos en las escaleras y encontrar más difíciles las distancias largas, el terreno irregular o las multitudes.</span></li>
+          <li><span class="gmfcs-lvl">III</span><span>Camina con una ayuda de mano como un andador o bastones, y puede usar una silla de ruedas para distancias más largas.</span></li>
+          <li class="gmfcs-dim"><span class="gmfcs-lvl">IV–V</span><span>Movilidad principalmente en silla de ruedas (menos frecuente en la diplejía espástica).</span></li>
+        </ul>
+        <p class="note"><a href="https://canchild.ca/en/resources/42-gross-motor-function-classification-system-expanded-revised-gmfcs-e-r" rel="noopener noreferrer" target="_blank">El GMFCS explicado (CanChild)</a></p>
+
+        <h3 class="mt-3">Objetivos, no “normalidad”</h3>
+        <p class="mt-1">La terapia moderna fija <strong>objetivos concretos que la familia elige</strong> (por
+          ejemplo, “cruzar la cocina con seguridad”) y practica esa tarea exacta. Los objetivos se
+          siguen con herramientas sencillas (como la Escala de Consecución de Objetivos), de modo que pueda ver si la terapia está funcionando
+          y ajustarla.</p>
+
+        <h3 class="mt-3">Lo que más importa</h3>
+        <p class="mt-1">Una forma sencilla de mantener la terapia orientada a una buena vida, no solo a la mecánica corporal: cómo hace
+          un niño algo cuenta más que lo “normal” que parezca.</p>
+      </div>
+    </section>
+
+    <section class="section" id="early">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">El momento importa</span>
+        <h2>La ventana temprana</h2>
+        <p class="mt-1">La parálisis cerebral y los problemas motores relacionados pueden detectarse ahora <strong>antes de los seis meses de
+          edad</strong> aproximadamente, combinando una evaluación del movimiento (Movimientos Generales), un breve examen neurológico (el
+          HINE) y una resonancia magnética, mucho antes que un diagnóstico tradicional de “esperar y ver”.
+          <a href="https://pubmed.ncbi.nlm.nih.gov/28715518/" rel="noopener noreferrer" target="_blank">(Novak y cols., 2017)</a>
+          Esa ventana temprana es cuando el cerebro es más adaptable, así que empezar pronto una práctica activa, enriquecida y administrada por los padres,
+          con programas como <strong>GAME</strong> (Goals–Activity–Motor
+          Enrichment, es decir, Objetivos–Actividad–Enriquecimiento Motor), lo aprovecha al máximo. <a href="https://pubmed.ncbi.nlm.nih.gov/33999106/" rel="noopener noreferrer" target="_blank">(guía de intervención temprana)</a></p>
+        <p>La <strong>orientación a los padres</strong>, que muestra a las familias cómo integrar la práctica en el juego cotidiano,
+          y el apoyo al propio bienestar de los cuidadores son, en sí mismos, partes basadas en la evidencia de una buena
+          atención.</p>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="team">
+      <div class="container measure mx-auto">
+          <span class="eyebrow">Trabajar juntos</span>
+          <h2>Trabajar con su equipo y encontrar ayuda</h2>
+          <p class="mt-1">Un buen plan de terapia es una colaboración entre usted, su hijo y las personas que ayudan.</p>
+
+          <h3 class="mt-3">Qué hace que funcione</h3>
+          <ul class="list-check mt-1">
+            <li><strong>Fije 2–3 objetivos concretos</strong> juntos, y revíselos.</li>
+            <li><strong>Pregunte por la dosis</strong>, porque un cambio significativo suele necesitar un volumen real de práctica,
+              gran parte en casa, no una breve visita semanal a la consulta.</li>
+            <li><strong>Mida el progreso</strong> con herramientas estándar (por ejemplo, la Medida de la Función Motora
+              Gruesa, o la Escala de Consecución de Objetivos) para poder saber qué está ayudando.</li>
+            <li><strong>Forme el equipo</strong>: la fisioterapia lidera aquí, junto con la terapia ocupacional
+              (tareas diarias, manos, sedestación), la logopedia y la terapia de alimentación cuando sea necesario, la ortopedia, y un médico
+              para la espasticidad y la salud ósea.</li>
+          </ul>
+
+          <h3 class="mt-3">Dónde encontrar ayuda</h3>
+      </div>
+      <div class="container">
+        <div class="grid grid--3 mt-3">
+          <article class="card">
+            <h3>Primeros pasos (EE. UU.)</h3>
+            <p>La <strong>intervención temprana</strong> gratuita o de bajo coste (del nacimiento a los 3 años) está disponible en cada
+              estado bajo la IDEA Part C. Una solicitud de los padres o una derivación del pediatra desencadena una evaluación
+              gratuita y un plan de apoyo individualizado; a partir de los 3 años, los servicios continúan a través del sistema
+              escolar.</p>
+            <ul class="mt-1">
+              <li><a href="https://www.parentcenterhub.org/ei-overview/" rel="noopener noreferrer" target="_blank">Intervención temprana: una visión general</a></li>
+              <li><a href="https://ectacenter.org/partc/partc.asp" rel="noopener noreferrer" target="_blank">Encuentre el programa de su estado</a></li>
+            </ul>
+            <p class="note">Fuera de EE. UU., pida a su pediatra o genetista clínico que le derive a los servicios locales de
+              desarrollo infantil, intervención temprana o fisioterapia.</p>
+          </article>
+          <article class="card card--accent">
+            <h3>Encontrar un terapeuta</h3>
+            <ul class="mt-1">
+              <li><a href="https://pediatricapta.org/consumers/" rel="noopener noreferrer" target="_blank">APTA Pediatrics</a>: fisioterapia, recursos para familias</li>
+              <li><a href="https://www.aota.org/" rel="noopener noreferrer" target="_blank">AOTA</a>: terapia ocupacional</li>
+              <li><a href="https://www.asha.org/" rel="noopener noreferrer" target="_blank">ASHA</a>: terapia del habla, el lenguaje y la alimentación</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Guías y lecturas más profundas</h3>
+            <ul class="mt-1">
+              <li><a href="https://pubmed.ncbi.nlm.nih.gov/32086598/" rel="noopener noreferrer" target="_blank">Novak: revisión del “semáforo” sobre qué funciona</a></li>
+              <li><a href="https://www.nice.org.uk/guidance/cg145" rel="noopener noreferrer" target="_blank">NICE CG145: espasticidad en menores de 19 años</a></li>
+              <li><a href="https://www.nice.org.uk/guidance/ng62" rel="noopener noreferrer" target="_blank">NICE NG62: parálisis cerebral</a></li>
+              <li><a href="https://www.aacpdm.org/publications/care-pathways/" rel="noopener noreferrer" target="_blank">Vías de atención de la AACPDM</a></li>
+              <li><a href="https://canchild.ca/" rel="noopener noreferrer" target="_blank">CanChild: GMFCS y herramientas para familias</a></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+      <div class="container measure mx-auto">
+        <p class="note mt-3">Sea cual sea el diagnóstico, un plan de terapia debe ser
+          <strong>individualizado</strong>, y estos recursos son un punto de partida, no una prescripción.</p>
+      </div>
+    </section>
+
+    <section class="section section--teal">
+      <div class="container cta-banner">
+        <h2>Explore más de COPB2.org</h2>
+        <div class="btn-row btn-row--center mt-2">
+          <a class="btn btn--light" href="copb2.html">COPB2</a>
+
+          <a class="btn btn--light" href="research.html">Investigación</a>
+          <a class="btn btn--light" href="glossary.html">Glosario</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a aria-label="Inicio de COPB2.org" class="brand" href="index.html"><img alt="" class="brand__mark" height="36" src="../assets/favicon.png" width="36"/> <span class="brand__name" style="color:#fff">COPB2.org</span></a>
+          <p>Un recurso de información independiente y sin fines de lucro sobre el gen COPB2 y las afecciones raras vinculadas a él.</p>
+        </div>
+        <div class="footer">
+          <h4>Explorar</h4>
+          <ul>
+            <li><a href="about.html">Acerca de</a></li>
+            <li><a href="copb2.html">COPB2</a></li>
+
+            <li><a href="research.html">Investigación</a></li>
+            <li><a href="therapy.html">Terapia</a></li>
+            <li><a href="glossary.html">Glosario</a></li>
+            <li><a href="community.html">Comunidad</a></li>
+          </ul>
+        </div>
+        <div class="footer">
+          <h4>Fuentes fiables</h4>
+          <ul>
+            <li><a href="https://omim.org/entry/606990" rel="noopener noreferrer" target="_blank">OMIM — COPB2</a></li>
+            <li><a href="https://www.ncbi.nlm.nih.gov/gene/9276" rel="noopener noreferrer" target="_blank">NCBI Gene 9276</a></li>
+            <li><a href="https://medlineplus.gov/genetics/" rel="noopener noreferrer" target="_blank">MedlinePlus Genetics</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year="">2026</span> COPB2.org. Un recurso informativo sin fines de lucro.</span>
+        <span>No es consejo médico · <a href="therapy.html#disclaimer">Lea nuestro aviso legal</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/lang-nav.js"></script>
+
+  <!-- On-this-page scroll-spy (progressive enhancement) -->
+  <script>
+  (function () {
+    var nav = document.querySelector('nav.toc');
+    if (!nav) return;
+    var links = {};
+    var sections = [];
+    nav.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      var s = document.getElementById(id);
+      if (s) { links[id] = a; sections.push(s); }
+    });
+    if (!sections.length) return;
+    var current = null, ticking = false;
+    function update() {
+      ticking = false;
+      var activeId = null;
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i].getBoundingClientRect().top <= 100) activeId = sections[i].id;
+        else break;
+      }
+      var next = activeId ? links[activeId] : null;
+      if (next !== current) {
+        if (current) current.removeAttribute('aria-current');
+        current = next;
+        if (current) current.setAttribute('aria-current', 'location');
+      }
+    }
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    update();
+  })();
+  </script>
+
+
+</body></html>

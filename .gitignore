@@ -1,0 +1,53 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.vscode/
+.idea/
+
+# Logs / temp
+*.log
+node_modules/
+__pycache__/
+*.pyc
+
+# Local tooling (not part of the website)
+.claude/
+gen_map.py
+tmp_world.geojson
+gen_hero.py
+check_site.py
+gen_i18n_pages.py
+_gen_page_i18n.py
+_emdash.py
+_emresearch.py
+_apply_static_en.py
+_apply_static_tr.py
+_validate_research.py
+gen_copi_figure.py
+copi_figure.svg
+gen_inherit.py
+gen_dx_figure.py
+dx_figure.svg
+
+# Draft research content (under review, not for publishing)
+research-compendium-draft.md
+_sample_copb2.md
+_sample_neuro.md
+gen_research_page.py
+research-preview.html
+_research_shell.html
+coat-proteins-and-the-nervous-system.md
+gen_translate_src.py
+gen_translate_page.py
+_src/
+js/i18n/
+build_tm.py
+rebuild_i18n.py
+audit_site.py
+tm.json
+new_phrases.json
+laozi.json
+external_urls.txt

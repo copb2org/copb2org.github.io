@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Therapy</title>
+  <meta content="Evidence-based physical therapy for children with spasticity and spastic diplegia (as in cerebral palsy): what works, the traffic-light of treatments, early intervention, bracing, and how to find help. General, sourced information, not medical advice." name="description"/>
+  <meta content="#12807e" name="theme-color"/>
+  <link href="assets/favicon.png" rel="icon" type="image/png"/>
+  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="css/styles.css" rel="stylesheet"/>
+
+  <meta content="website" property="og:type"/>
+  <meta content="Therapy" property="og:title"/>
+  <meta content="COPB2.org" property="og:site_name"/>
+  <meta content="What works in physical therapy for spastic diplegia, an evidence traffic-light, early intervention, and how to find help." property="og:description"/>
+  <meta content="https://copb2org.github.io/assets/og-image.png" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="https://copb2org.github.io/therapy.html" property="og:url"/>
+  <link href="https://copb2org.github.io/therapy.html" rel="canonical"/>
+  <meta content="Therapy" name="twitter:title"/>
+  <meta content="What works in physical therapy for spastic diplegia, an evidence traffic-light, early intervention, and how to find help." name="twitter:description"/>
+  <meta content="https://copb2org.github.io/assets/og-image.png" name="twitter:image"/>
+  <meta content="1200" property="og:image:width"/>
+  <meta content="630" property="og:image:height"/>
+  <style>
+    /* Therapy page (page-scoped) */
+    main section[id]{scroll-margin-top:84px}
+    /* Evidence traffic-light */
+    .tl{display:grid;gap:1rem;margin:1.4rem 0 .6rem}
+    @media(min-width:760px){.tl{grid-template-columns:repeat(3,1fr)}}
+    .tl-card{border:1px solid var(--line);border-radius:14px;padding:1rem 1.15rem;background:var(--surface)}
+    .tl-card h3{margin:.1rem 0 .15rem;font-size:1.04rem;display:flex;align-items:center;gap:.5rem}
+    .tl-card ul{margin:.4rem 0 0;padding-left:1.15rem}
+    .tl-card li{margin:.34rem 0;line-height:1.5;font-size:.92rem}
+    .tl-dot{width:.85rem;height:.85rem;border-radius:50%;display:inline-block;flex:0 0 auto}
+    .tl-green{background:#eef7f1}
+    .tl-green .tl-dot{background:#2f9e63}
+    .tl-amber{background:#fdf4ea}
+    .tl-amber .tl-dot{background:var(--amber-500)}
+    .tl-red{background:var(--coral-100)}
+    .tl-red .tl-dot{background:var(--coral-600)}
+    .grade{font-size:.7rem;font-weight:700;letter-spacing:.02em;padding:.12rem .5rem;border-radius:999px;white-space:nowrap;vertical-align:middle;margin-left:.4rem}
+    .grade--green{background:#e3f3ea;color:#1e6b43}
+    .grade--amber{background:#fdeedd;color:#8a5316}
+    .grade--red{background:var(--coral-100);color:#7a2f24}
+    /* Therapy "building blocks": icon header bands */
+    .tx-bands{list-style:none;margin:1.7rem 0 0;padding:0;display:flex;flex-direction:column;gap:1.1rem}
+    .tx-band{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
+    .tx-band__head{display:flex;align-items:center;gap:.7rem;padding:.8rem 1.1rem;background:var(--teal-50)}
+    .tx-band__head h3{margin:0;font-size:1.1rem;color:var(--teal-900)}
+    .tx-ico{flex:0 0 auto;width:1.85rem;height:1.85rem;color:var(--teal-700);display:flex}
+    .tx-ico svg{width:100%;height:100%}
+    .tx-band__head .grade{margin-left:auto}
+    .tx-band--care .tx-band__head{background:#fdf4ea}
+    .tx-band--care .tx-ico{color:var(--amber-500)}
+    .tx-band--care .tx-band__head h3{color:#8a5316}
+    .tx-band__body{padding:.9rem 1.1rem 1.1rem}
+    .pt-step__lead{font-weight:600;color:var(--ink-soft);margin:0 0 .5rem}
+    .tx-band__body>p{margin:.55rem 0 0}
+    .tx-band__body ul{margin:.55rem 0 0;padding-left:1.15rem}
+    .tx-band__body li{margin:.38rem 0;line-height:1.55}
+    .tx-band__body .note{margin-top:.65rem}
+    /* Traffic-light: non-colour glyph cue + AA-readable caption on the red card */
+    .tl-dot{position:relative}
+    .tl-green .tl-dot::before,.tl-amber .tl-dot::before,.tl-red .tl-dot::before{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.6rem;font-weight:700;line-height:1}
+    .tl-green .tl-dot::before{content:"\2713"}
+    .tl-amber .tl-dot::before{content:"~"}
+    .tl-red .tl-dot::before{content:"?"}
+    /* GMFCS level scale */
+    .gmfcs-scale{list-style:none;margin:.5rem 0 .5rem;padding:0;display:grid;gap:.85rem}
+    .gmfcs-scale li{display:grid;grid-template-columns:auto 1fr;gap:.85rem;align-items:start}
+    .gmfcs-lvl{display:flex;align-items:center;justify-content:center;min-width:2.3rem;height:2.3rem;padding:0 .5rem;border-radius:1.15rem;background:var(--teal-600);color:#fff;font-weight:700;font-size:.82rem;flex:0 0 auto}
+    .gmfcs-scale li>span:last-child{padding-top:.3rem;line-height:1.45;font-size:.92rem}
+    .gmfcs-scale .gmfcs-dim .gmfcs-lvl{background:transparent;color:var(--muted);border:1.5px solid var(--line)}
+    .gmfcs-scale .gmfcs-dim>span:last-child{color:var(--muted)}
+    /* On-this-page active link */
+    nav.toc a[aria-current="location"]{font-weight:700;color:var(--teal-700)}
+  </style>
+<link href="https://copb2org.github.io/therapy.html" hreflang="en" rel="alternate"/><link href="https://copb2org.github.io/zh/therapy.html" hreflang="zh" rel="alternate"/><link href="https://copb2org.github.io/es/therapy.html" hreflang="es" rel="alternate"/><link href="https://copb2org.github.io/fr/therapy.html" hreflang="fr" rel="alternate"/><link href="https://copb2org.github.io/ja/therapy.html" hreflang="ja" rel="alternate"/><link href="https://copb2org.github.io/therapy.html" hreflang="x-default" rel="alternate"/></head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a aria-label="COPB2.org home" class="brand" href="index.html">
+        <img alt="" class="brand__mark" height="36" src="assets/favicon.png" width="36"/>
+        <span class="brand__name">COPB2<b>.org</b></span>
+      </a>
+      <button aria-controls="nav-links" aria-expanded="false" aria-label="Open menu" class="nav__toggle">
+        <svg aria-hidden="true" class="icon-open" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+        <svg aria-hidden="true" class="icon-close" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24"><line x1="6" x2="18" y1="6" y2="18"></line><line x1="6" x2="18" y1="18" y2="6"></line></svg>
+      </button>
+      <nav aria-label="Primary">
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="copb2.html">COPB2</a></li>
+        <li><a href="community.html">Community</a></li>
+
+        <li><a href="research.html">Research</a></li>
+        <li><a aria-current="page" href="therapy.html">Therapy</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">Home</a> / Therapy</p>
+        <span class="eyebrow">Therapy &amp; rehabilitation</span>
+        <h1>Therapy for Spastic Diplegia</h1>
+        <p class="lead measure">Spastic diplegia, meaning stiff, tight legs that make standing and walking hard,
+          is one of the most common patterns in cerebral palsy. Physical therapy is the main way
+          children gain strength, mobility and independence, and the evidence keeps returning to one idea above
+          all: <strong>active, goal-directed practice, done often, beats passive treatment</strong>.</p>
+      </div>
+    </section>
+
+    <!-- Medical disclaimer / honest note -->
+    <section class="section section--tight" id="disclaimer">
+      <div class="container measure mx-auto">
+        <p class="note"><strong>Not medical advice.</strong> There is a great deal that can help, and the
+          well-studied principles of therapy for spastic diplegia, namely active, goal-directed, early and
+          individualised, transfer well, even though there is no COPB2-specific protocol yet. Because
+          COPB2 is genetic and may behave differently from the brain-injury cerebral palsy this evidence comes
+          from, a qualified physiotherapist should tailor everything to your child and confirm nothing here is
+          unsuitable, for example before vigorous strengthening or surgery, and, for the bone form
+          (OPDD), how to load bones safely. This page is general information for education, not a treatment
+          plan.</p>
+      </div>
+    </section>
+
+    <!-- On this page -->
+    <section class="section section--tight">
+      <div class="container measure mx-auto">
+        <h2 id="on-this-page">On This Page</h2>
+        <nav class="toc" aria-labelledby="on-this-page">
+          <ul class="list-check mt-1">
+            <li><a href="#principle">The One Idea That Makes Therapy Work</a></li>
+            <li><a href="#evidence">What the Evidence Supports</a></li>
+            <li><a href="#therapies">The Therapies, Explained</a></li>
+            <li><a href="#child">Understanding Your Child</a></li>
+            <li><a href="#early">The Early Window</a></li>
+            <li><a href="#team">Working With Your Team &amp; Finding Help</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- THE ONE IDEA -->
+    <section class="section" id="principle">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">The core idea</span>
+        <h2>The One Idea That Makes Therapy Work</h2>
+        <p class="mt-1">Across every high-quality review, the therapies that genuinely improve movement share
+          one mechanism: <strong>the child does the movement themselves, practises it a lot, and works toward a
+          real goal they care about</strong>, such as climbing the stairs, keeping up at the playground, or walking
+          to class. Active, repeated, meaningful practice is what drives the brain to rewire (what scientists
+          call experience-dependent neuroplasticity).</p>
+        <p>The flip side is just as important. <strong>Passive, hands-on treatment</strong>, where a
+          therapist moves the child or tries to &ldquo;normalise&rdquo; muscle tone while the child stays
+          passive, <strong>does not work</strong>. A useful test: if a therapy is mostly something done
+          <em>to</em> your child rather than something your child actively does, it is fair to ask for the
+          evidence.</p>
+        <p class="note">The field&rsquo;s reference map is the Novak &ldquo;traffic-light&rdquo; review, which
+          grades cerebral-palsy treatments green (do it), yellow (probably, and measure it) or red
+          (don&rsquo;t): <a href="https://pubmed.ncbi.nlm.nih.gov/32086598/" rel="noopener noreferrer" target="_blank">Novak et al., 2020 (PubMed)</a>.</p>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="evidence">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">What works</span>
+        <h2>What the Evidence Supports</h2>
+        <p class="mt-1">A quick map of therapy approaches for spastic diplegia, grouped by how well
+          research supports them. &ldquo;Supported&rdquo; means the best available evidence backs doing it,
+          not that it is a cure.</p>
+      </div>
+      <div class="container">
+        <div class="tl" role="group" aria-label="How strongly research supports each therapy">
+          <div class="tl-card tl-green">
+            <h3><span class="tl-dot" aria-hidden="true"></span>Do: Supported</h3>
+            <ul>
+              <li>Goal-directed, task-specific practice</li>
+              <li>Progressive strength training</li>
+              <li>Treadmill (&plusmn; body-weight support) &amp; gait training</li>
+              <li>Botulinum toxin + active therapy; serial casting</li>
+              <li>Selective dorsal rhizotomy (for selected ambulant diplegia)</li>
+              <li>Ankle-foot orthoses, matched to the problem</li>
+              <li>Hip surveillance; weight-bearing for bone</li>
+              <li>Early detection &amp; early intervention; parent coaching</li>
+            </ul>
+          </div>
+          <div class="tl-card tl-amber">
+            <h3><span class="tl-dot" aria-hidden="true"></span>Maybe: Try &amp; Measure</h3>
+            <ul>
+              <li>Functional electrical stimulation (foot-drop)</li>
+              <li>Robotic gait training (mixed results)</li>
+              <li>Aquatic therapy / hydrotherapy</li>
+              <li>Hippotherapy (mainly posture &amp; trunk)</li>
+              <li>Adapted or FES cycling</li>
+              <li>Standing programs (for bone &amp; hips)</li>
+            </ul>
+          </div>
+          <div class="tl-card tl-red">
+            <h3><span class="tl-dot" aria-hidden="true"></span>Question: Weak or No Benefit</h3>
+            <ul>
+              <li>Classic passive NDT / Bobath</li>
+              <li>Passive stretching alone (for contractures)</li>
+              <li>Sensory integration (for motor skills)</li>
+              <li>Suit therapy (Therasuit / Adeli)</li>
+              <li>Hyperbaric oxygen; craniosacral therapy</li>
+              <li>Conductive education, Vojta (for motor outcomes)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container measure mx-auto">
+        <p class="note">Grades summarised from <a href="https://pubmed.ncbi.nlm.nih.gov/32086598/" rel="noopener noreferrer" target="_blank">Novak et al., 2020</a>
+          and the Cochrane and guideline reviews cited below. The cerebral-palsy evidence base is mostly
+          low-to-moderate quality, so these are best estimates, not guarantees.</p>
+      </div>
+    </section>
+
+    <section class="section" id="therapies">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">The building blocks</span>
+        <h2>The Therapies, Explained</h2>
+        <p class="mt-1">For a child with spastic diplegia, a good plan usually combines several of these, chosen
+          around the family&rsquo;s goals and the child&rsquo;s level.</p>
+
+        <ul class="tx-bands">
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 10.5v3M7 9v6M17 9v6M19.2 10.5v3M7 12h10"/></svg></span>
+<h3>Move &amp; Strengthen</h3>
+<span class="grade grade--green">Supported</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">Active, repeated practice of real tasks is the engine of nearly all
+                progress.</p>
+<ul>
+<li><strong>Goal-directed, task-specific training</strong> means practising the real task
+                  (stand, step, climb) toward a chosen goal. The strongest and most broadly useful approach.</li>
+<li><strong>Progressive strength training</strong>: building leg strength <em>does not
+                  make spasticity worse</em> (a long-standing fear, now overturned) and improves strength,
+                  walking speed and balance. <a href="https://pubmed.ncbi.nlm.nih.gov/34407619/" rel="noopener noreferrer" target="_blank">(meta-analysis, 27 trials)</a>
+                  One caveat: strength on its own does not automatically turn into better walking, so pair
+                  it with task practice.</li>
+<li><strong>Home practice</strong>: short, regular, goal-focused practice woven into
+                  daily life adds the <em>dose</em> that makes therapy work. The amount of active practice
+                  matters more than the brand name of the therapy.</li>
+</ul>
+</div>
+</li>
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4.5" r="2"/><path d="M12.5 7.5L11 13.5L8 19.5"/><path d="M11 13.5l4 2l-1.5 4.5"/><path d="M9.3 11L12.3 8.7L15 10.7"/></svg></span>
+<h3>Walk Farther, More Easily</h3>
+<span class="grade grade--green">Supported</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">Make walking faster, steadier and less tiring through real-world
+                practice.</p>
+<ul>
+<li><strong>Treadmill training, with or without body-weight support</strong>, which is among the
+                  best-ranked approaches for improving walking speed in children who can take steps (its effect
+                  on endurance is less certain).</li>
+<li><strong>Overground &amp; functional gait training</strong> means practising real walking
+                  in real places; the backbone of mobility work.</li>
+<li><strong>Aerobic fitness</strong> improves stamina, health and participation, and
+                  helps counter the drift toward becoming less active over time.</li>
+</ul>
+</div>
+</li>
+<li class="tx-band tx-band--care"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="6.5" width="4" height="9" rx="1" transform="rotate(45 11 11)"/><path d="M7.8 14.2L5 17"/><path d="M14.2 7.8L17 5"/><path d="M16 4L18 6"/></svg></span>
+<h3>Managing the Spasticity</h3>
+<span class="grade grade--amber">Supported, with care</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">Medical treatments that ease the tightness itself, paired with active
+                therapy.</p>
+<p>It helps to know the difference between two kinds of tightness: <strong>spasticity</strong>,
+                meaning muscle tightness that resists quick movement, can often be eased (for example
+                with botulinum toxin or surgery); but once a muscle becomes a fixed, shortened
+                <strong>contracture</strong>, those tone treatments can no longer reverse it. That is why
+                <em>timing</em> matters. These are decisions for a specialist team:</p>
+<ul>
+<li><strong>Botulinum toxin (“Botox”) injections</strong> into specific tight
+                  muscles can ease focal tightness for a few months, opening a window for active therapy and
+                  casting. It is well established for reducing tone, though its effect on day-to-day
+                  <em>function</em> is less certain and repeated injections raise questions about muscle health,
+                  so it is used selectively. <a href="https://pubmed.ncbi.nlm.nih.gov/31591703/" rel="noopener noreferrer" target="_blank">(Cochrane review)</a></li>
+<li><strong>Selective dorsal rhizotomy (SDR)</strong> is a one-time spinal operation that
+                  permanently reduces leg spasticity by cutting some of the sensory nerve roots, followed by
+                  months of intensive physiotherapy. In <em>carefully selected</em> walking children with
+                  spastic diplegia (often GMFCS II–III, around ages 3–10), it can give lasting
+                  spasticity relief and, in well-chosen candidates, gains in walking and independence reported
+                  years later. <a href="https://pubmed.ncbi.nlm.nih.gov/23713680/" rel="noopener noreferrer" target="_blank">(long-term follow-up)</a>
+                  Because it is irreversible and, like any spinal surgery, carries risks (changes in
+                  sensation, bladder or bowel function, and later spine problems such as scoliosis), it is
+                  offered only after careful team assessment, and long-term head-to-head comparisons with
+                  intensive physiotherapy alone are still limited.</li>
+<li><strong>Serial casting</strong> uses a series of casts that gently lengthen a tight calf;
+                  effective for early, still-flexible tightness, often used after botulinum toxin.</li>
+<li><strong>Intrathecal baclofen and oral medicines</strong> are mainly for more severe,
+                  whole-body spasticity; a medical decision.</li>
+</ul>
+<p class="note">On managing spasticity in children: <a href="https://www.nice.org.uk/guidance/cg145" rel="noopener noreferrer" target="_blank">NICE guideline CG145</a>.</p>
+</div>
+</li>
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3.5v9.5q0 3 -3 3h-7q-2 0 -2 -2"/><path d="M12 3.5v9.5L5 14"/><path d="M12 6.5h5M12 10.5h5"/></svg></span>
+<h3>Bracing &amp; Equipment</h3>
+<span class="grade grade--green">Supported</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">The right brace or mobility aid, matched to the specific problem.</p>
+<ul>
+<li><strong>Ankle-foot orthoses (AFOs)</strong> improve walking, but the <em>type</em>
+                  should fit the problem: a solid or leaf-spring AFO for drop-foot; a <strong>hinged</strong>
+                  AFO when the child needs to bend the ankle for sit-to-stand and stairs; a
+                  <strong>ground-reaction</strong> AFO for a flexible crouch. <a href="https://pubmed.ncbi.nlm.nih.gov/29714066/" rel="noopener noreferrer" target="_blank">(AFO meta-analysis, 56 studies)</a></li>
+<li><strong>Walkers, gait trainers and wheelchairs</strong>: the right mobility aid for
+                  the child’s level supports independence and participation. Using a wheelchair for
+                  distance is not “giving up” on walking; it saves energy for what matters.</li>
+<li>“Tone-reducing” brace features and night splints have <strong>weak
+                  evidence</strong>, so they are reasonable to question.</li>
+</ul>
+</div>
+</li>
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="8.7" y1="15.3" x2="15.3" y2="8.7"/><circle cx="7.4" cy="14.4" r="1.7"/><circle cx="9.6" cy="16.6" r="1.7"/><circle cx="14.4" cy="7.4" r="1.7"/><circle cx="16.6" cy="9.6" r="1.7"/></svg></span>
+<h3>Protect the Hips &amp; Bones</h3>
+<span class="grade grade--green">Supported</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">Keep hips in place and bones strong as your child grows.</p>
+<ul>
+<li><strong>Hip surveillance</strong>: regular hip X-rays on a schedule set by GMFCS
+                  level catch hip displacement early, when it is most treatable. Population-wide surveillance
+                  programs have dramatically reduced hip dislocations. <a href="https://www.aacpdm.org/publications/care-pathways/hip-surveillance-in-cerebral-palsy" rel="noopener noreferrer" target="_blank">(AACPDM care pathway)</a></li>
+<li><strong>Weight-bearing / standing, vitamin D and calcium</strong> are important for
+                  bone strength, especially in children who walk less. (For the COPB2 bone form, OPDD, plan
+                  loading together with a bone specialist.)</li>
+<li><strong>Preventing contractures</strong>: active movement, strengthening, casting and
+                  standing programs do more than passive stretching, which on its own does not prevent
+                  tightness.</li>
+</ul>
+</div>
+</li>
+</ul>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="child">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">Know the starting point</span>
+        <h2>Understanding Your Child</h2>
+
+        <h3 class="mt-3">GMFCS: Where They Are Now</h3>
+        <p class="mt-1">The Gross Motor Function Classification System describes how a child moves, in five
+          levels. Spastic diplegia is usually Levels&nbsp;I&ndash;III (walking, with or without aids). It helps
+          the team set realistic goals, judge hip risk, and decide who might benefit from options like surgery.
+          It is a starting point, <strong>not a ceiling</strong> on what to work toward.</p>
+        <p class="note">Roughly, around ages 6&ndash;12:</p>
+        <ul class="gmfcs-scale">
+          <li><span class="gmfcs-lvl">I</span><span>Walks everywhere; may find running, speed or balance harder.</span></li>
+          <li><span class="gmfcs-lvl">II</span><span>Walks in most places; may hold a rail on stairs and find long distances, uneven ground or crowds harder.</span></li>
+          <li><span class="gmfcs-lvl">III</span><span>Walks with a hand-held aid such as a walker or sticks, and may use a wheelchair for longer distances.</span></li>
+          <li class="gmfcs-dim"><span class="gmfcs-lvl">IV&ndash;V</span><span>Mainly wheelchair mobility (less common in spastic diplegia).</span></li>
+        </ul>
+        <p class="note"><a href="https://canchild.ca/en/resources/42-gross-motor-function-classification-system-expanded-revised-gmfcs-e-r" rel="noopener noreferrer" target="_blank">GMFCS explained (CanChild)</a></p>
+
+        <h3 class="mt-3">Goals, Not &ldquo;Normal&rdquo;</h3>
+        <p class="mt-1">Modern therapy sets <strong>specific goals the family chooses</strong> (for
+          example, &ldquo;walk across the kitchen safely&rdquo;) and practises that exact task. Goals are
+          tracked with simple tools (like Goal Attainment Scaling), so you can see whether therapy is working
+          and adjust it.</p>
+
+        <h3 class="mt-3">What Matters Most</h3>
+        <p class="mt-1">A simple way to keep therapy aimed at a good life, not just body mechanics: how a child
+          does something counts more than how &ldquo;normal&rdquo; it looks.</p>
+      </div>
+    </section>
+
+    <section class="section" id="early">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">Timing matters</span>
+        <h2>The Early Window</h2>
+        <p class="mt-1">Cerebral palsy and related motor problems can now be detected <strong>before about six months of
+          age</strong> by combining a movement assessment (General Movements), a brief neurological exam (the
+          HINE) and an MRI, long before a traditional &ldquo;wait and see&rdquo; diagnosis.
+          <a href="https://pubmed.ncbi.nlm.nih.gov/28715518/" rel="noopener noreferrer" target="_blank">(Novak et al., 2017)</a>
+          That early window is when the brain is most adaptable, so starting active, enriched, parent-delivered
+          practice early, with programs such as <strong>GAME</strong> (Goals&ndash;Activity&ndash;Motor
+          Enrichment), makes the most of it. <a href="https://pubmed.ncbi.nlm.nih.gov/33999106/" rel="noopener noreferrer" target="_blank">(early-intervention guideline)</a></p>
+        <p><strong>Parent coaching</strong>, which shows families how to build practice into everyday play,
+          and support for caregivers&rsquo; own wellbeing are themselves evidence-based parts of good
+          care.</p>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="team">
+      <div class="container measure mx-auto">
+          <span class="eyebrow">Working together</span>
+          <h2>Working With Your Team &amp; Finding Help</h2>
+          <p class="mt-1">A good therapy plan is a partnership between you, your child, and the people who help.</p>
+
+          <h3 class="mt-3">What Makes It Work</h3>
+          <ul class="list-check mt-1">
+            <li><strong>Set 2&ndash;3 concrete goals</strong> together, and revisit them.</li>
+            <li><strong>Ask about dose</strong>, because meaningful change usually needs real practice volume,
+              much of it at home, not one short clinic visit a week.</li>
+            <li><strong>Measure progress</strong> with standard tools (for example the Gross Motor Function
+              Measure, or Goal Attainment Scaling) so you can tell what is helping.</li>
+            <li><strong>Build the team</strong>: physiotherapy leads here, alongside occupational therapy
+              (daily tasks, hands, seating), speech and feeding therapy where needed, orthotics, and a doctor
+              for spasticity and bone health.</li>
+          </ul>
+
+          <h3 class="mt-3">Where to Find Help</h3>
+      </div>
+      <div class="container">
+        <div class="grid grid--3 mt-3">
+          <article class="card">
+            <h3>Getting Started (US)</h3>
+            <p>Free or low-cost <strong>early intervention</strong> (birth to age 3) is available in every
+              state under IDEA Part&nbsp;C. A parent request or a paediatrician referral triggers a free
+              evaluation and an individualised support plan; from age 3, services continue through the school
+              system.</p>
+            <ul class="mt-1">
+              <li><a href="https://www.parentcenterhub.org/ei-overview/" rel="noopener noreferrer" target="_blank">Early intervention: an overview</a></li>
+              <li><a href="https://ectacenter.org/partc/partc.asp" rel="noopener noreferrer" target="_blank">Find your state&rsquo;s programme</a></li>
+            </ul>
+            <p class="note">Outside the US, ask your paediatrician or clinical geneticist to refer you to local
+              child-development, early-intervention or physiotherapy services.</p>
+          </article>
+          <article class="card card--accent">
+            <h3>Find a Therapist</h3>
+            <ul class="mt-1">
+              <li><a href="https://pediatricapta.org/consumers/" rel="noopener noreferrer" target="_blank">APTA Pediatrics</a>: physical therapy, family resources</li>
+              <li><a href="https://www.aota.org/" rel="noopener noreferrer" target="_blank">AOTA</a>: occupational therapy</li>
+              <li><a href="https://www.asha.org/" rel="noopener noreferrer" target="_blank">ASHA</a>: speech-language &amp; feeding therapy</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Guidelines &amp; Deeper Reading</h3>
+            <ul class="mt-1">
+              <li><a href="https://pubmed.ncbi.nlm.nih.gov/32086598/" rel="noopener noreferrer" target="_blank">Novak&rsquo;s &ldquo;traffic-light&rdquo; review of what works</a></li>
+              <li><a href="https://www.nice.org.uk/guidance/cg145" rel="noopener noreferrer" target="_blank">NICE CG145: spasticity in under-19s</a></li>
+              <li><a href="https://www.nice.org.uk/guidance/ng62" rel="noopener noreferrer" target="_blank">NICE NG62: cerebral palsy</a></li>
+              <li><a href="https://www.aacpdm.org/publications/care-pathways/" rel="noopener noreferrer" target="_blank">AACPDM care pathways</a></li>
+              <li><a href="https://canchild.ca/" rel="noopener noreferrer" target="_blank">CanChild: GMFCS &amp; family tools</a></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+      <div class="container measure mx-auto">
+        <p class="note mt-3">Whatever the diagnosis, a therapy plan should be
+          <strong>individualised</strong>, and these resources are a starting point, not a prescription.</p>
+      </div>
+    </section>
+
+    <section class="section section--teal">
+      <div class="container cta-banner">
+        <h2>Explore More of COPB2.org</h2>
+        <div class="btn-row btn-row--center mt-2">
+          <a class="btn btn--light" href="copb2.html">COPB2</a>
+
+          <a class="btn btn--light" href="research.html">Research</a>
+          <a class="btn btn--light" href="glossary.html">Glossary</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a aria-label="COPB2.org home" class="brand" href="index.html">
+            <img alt="" class="brand__mark" height="36" src="assets/favicon.png" width="36"/>
+            <span class="brand__name" style="color:#fff">COPB2.org</span>
+          </a>
+          <p>An independent, non-profit information resource about the COPB2 gene and the rare conditions linked to it.</p>
+        </div>
+        <div class="footer">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="copb2.html">COPB2</a></li>
+
+            <li><a href="research.html">Research</a></li>
+            <li><a href="therapy.html">Therapy</a></li>
+            <li><a href="glossary.html">Glossary</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
+        </div>
+        <div class="footer">
+          <h4>Reliable Sources</h4>
+          <ul>
+            <li><a href="https://omim.org/entry/606990" rel="noopener noreferrer" target="_blank">OMIM — COPB2</a></li>
+            <li><a href="https://www.ncbi.nlm.nih.gov/gene/9276" rel="noopener noreferrer" target="_blank">NCBI Gene 9276</a></li>
+            <li><a href="https://medlineplus.gov/genetics/" rel="noopener noreferrer" target="_blank">MedlinePlus Genetics</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year="">2026</span> COPB2.org. A non-profit information resource.</span>
+        <span>Not medical advice · <a href="therapy.html#disclaimer">Read our disclaimer</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/lang-nav.js"></script>
+
+  <!-- On-this-page scroll-spy (progressive enhancement) -->
+  <script>
+  (function () {
+    var nav = document.querySelector('nav.toc');
+    if (!nav) return;
+    var links = {};
+    var sections = [];
+    nav.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      var s = document.getElementById(id);
+      if (s) { links[id] = a; sections.push(s); }
+    });
+    if (!sections.length) return;
+    var current = null, ticking = false;
+    function update() {
+      ticking = false;
+      var activeId = null;
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i].getBoundingClientRect().top <= 100) activeId = sections[i].id;
+        else break;
+      }
+      var next = activeId ? links[activeId] : null;
+      if (next !== current) {
+        if (current) current.removeAttribute('aria-current');
+        current = next;
+        if (current) current.setAttribute('aria-current', 'location');
+      }
+    }
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    update();
+  })();
+  </script>
+
+</body></html>

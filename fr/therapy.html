@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Thérapie</title>
+  <meta content="Kinésithérapie fondée sur les preuves pour les enfants présentant une spasticité et une diplégie spastique (comme dans la paralysie cérébrale) : ce qui fonctionne, le code couleur des traitements, l'intervention précoce, l'appareillage, et comment trouver de l'aide. Information générale et sourcée, pas un avis médical." name="description"/>
+  <meta content="#12807e" name="theme-color"/>
+  <link href="../assets/favicon.png" rel="icon" type="image/png"/>
+  <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="../css/styles.css" rel="stylesheet"/>
+
+  <meta content="website" property="og:type"/>
+  <meta content="Thérapie" property="og:title"/>
+  <meta content="COPB2.org" property="og:site_name"/>
+  <meta content="Kinésithérapie fondée sur les preuves pour les enfants présentant une spasticité et une diplégie spastique (comme dans la paralysie cérébrale) : ce qui fonctionne, le code couleur des traitements, l'intervention précoce, l'appareillage, et comment trouver de l'aide. Information générale et sourcée, pas un avis médical." property="og:description"/>
+  <meta content="https://copb2org.github.io/assets/og-image.png" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="https://copb2org.github.io/fr/therapy.html" property="og:url"/>
+  <link href="https://copb2org.github.io/fr/therapy.html" rel="canonical"/>
+  <meta content="Thérapie" name="twitter:title"/>
+  <meta content="Kinésithérapie fondée sur les preuves pour les enfants présentant une spasticité et une diplégie spastique (comme dans la paralysie cérébrale) : ce qui fonctionne, le code couleur des traitements, l'intervention précoce, l'appareillage, et comment trouver de l'aide. Information générale et sourcée, pas un avis médical." name="twitter:description"/>
+  <meta content="https://copb2org.github.io/assets/og-image.png" name="twitter:image"/>
+  <meta content="1200" property="og:image:width"/>
+  <meta content="630" property="og:image:height"/>
+  <style>
+    /* Therapy page (page-scoped) */
+    main section[id]{scroll-margin-top:84px}
+    /* Evidence traffic-light */
+    .tl{display:grid;gap:1rem;margin:1.4rem 0 .6rem}
+    @media(min-width:760px){.tl{grid-template-columns:repeat(3,1fr)}}
+    .tl-card{border:1px solid var(--line);border-radius:14px;padding:1rem 1.15rem;background:var(--surface)}
+    .tl-card h3{margin:.1rem 0 .15rem;font-size:1.04rem;display:flex;align-items:center;gap:.5rem}
+    .tl-card ul{margin:.4rem 0 0;padding-left:1.15rem}
+    .tl-card li{margin:.34rem 0;line-height:1.5;font-size:.92rem}
+    .tl-dot{width:.85rem;height:.85rem;border-radius:50%;display:inline-block;flex:0 0 auto}
+    .tl-green{background:#eef7f1}
+    .tl-green .tl-dot{background:#2f9e63}
+    .tl-amber{background:#fdf4ea}
+    .tl-amber .tl-dot{background:var(--amber-500)}
+    .tl-red{background:var(--coral-100)}
+    .tl-red .tl-dot{background:var(--coral-600)}
+    .grade{font-size:.7rem;font-weight:700;letter-spacing:.02em;padding:.12rem .5rem;border-radius:999px;white-space:nowrap;vertical-align:middle;margin-left:.4rem}
+    .grade--green{background:#e3f3ea;color:#1e6b43}
+    .grade--amber{background:#fdeedd;color:#8a5316}
+    .grade--red{background:var(--coral-100);color:#7a2f24}
+    /* Therapy "building blocks": icon header bands */
+    .tx-bands{list-style:none;margin:1.7rem 0 0;padding:0;display:flex;flex-direction:column;gap:1.1rem}
+    .tx-band{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
+    .tx-band__head{display:flex;align-items:center;gap:.7rem;padding:.8rem 1.1rem;background:var(--teal-50)}
+    .tx-band__head h3{margin:0;font-size:1.1rem;color:var(--teal-900)}
+    .tx-ico{flex:0 0 auto;width:1.85rem;height:1.85rem;color:var(--teal-700);display:flex}
+    .tx-ico svg{width:100%;height:100%}
+    .tx-band__head .grade{margin-left:auto}
+    .tx-band--care .tx-band__head{background:#fdf4ea}
+    .tx-band--care .tx-ico{color:var(--amber-500)}
+    .tx-band--care .tx-band__head h3{color:#8a5316}
+    .tx-band__body{padding:.9rem 1.1rem 1.1rem}
+    .pt-step__lead{font-weight:600;color:var(--ink-soft);margin:0 0 .5rem}
+    .tx-band__body>p{margin:.55rem 0 0}
+    .tx-band__body ul{margin:.55rem 0 0;padding-left:1.15rem}
+    .tx-band__body li{margin:.38rem 0;line-height:1.55}
+    .tx-band__body .note{margin-top:.65rem}
+    /* Traffic-light: non-colour glyph cue + AA-readable caption on the red card */
+    .tl-dot{position:relative}
+    .tl-green .tl-dot::before,.tl-amber .tl-dot::before,.tl-red .tl-dot::before{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.6rem;font-weight:700;line-height:1}
+    .tl-green .tl-dot::before{content:"\2713"}
+    .tl-amber .tl-dot::before{content:"~"}
+    .tl-red .tl-dot::before{content:"?"}
+    /* GMFCS level scale */
+    .gmfcs-scale{list-style:none;margin:.5rem 0 .5rem;padding:0;display:grid;gap:.85rem}
+    .gmfcs-scale li{display:grid;grid-template-columns:auto 1fr;gap:.85rem;align-items:start}
+    .gmfcs-lvl{display:flex;align-items:center;justify-content:center;min-width:2.3rem;height:2.3rem;padding:0 .5rem;border-radius:1.15rem;background:var(--teal-600);color:#fff;font-weight:700;font-size:.82rem;flex:0 0 auto}
+    .gmfcs-scale li>span:last-child{padding-top:.3rem;line-height:1.45;font-size:.92rem}
+    .gmfcs-scale .gmfcs-dim .gmfcs-lvl{background:transparent;color:var(--muted);border:1.5px solid var(--line)}
+    .gmfcs-scale .gmfcs-dim>span:last-child{color:var(--muted)}
+    /* On-this-page active link */
+    nav.toc a[aria-current="location"]{font-weight:700;color:var(--teal-700)}
+  </style>
+<link href="https://copb2org.github.io/therapy.html" hreflang="en" rel="alternate"/><link href="https://copb2org.github.io/zh/therapy.html" hreflang="zh" rel="alternate"/><link href="https://copb2org.github.io/es/therapy.html" hreflang="es" rel="alternate"/><link href="https://copb2org.github.io/fr/therapy.html" hreflang="fr" rel="alternate"/><link href="https://copb2org.github.io/ja/therapy.html" hreflang="ja" rel="alternate"/><link href="https://copb2org.github.io/therapy.html" hreflang="x-default" rel="alternate"/></head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a aria-label="Accueil COPB2.org" class="brand" href="index.html">
+        <img alt="" class="brand__mark" height="36" src="../assets/favicon.png" width="36"/>
+        <span class="brand__name">COPB2<b>.org</b></span>
+      </a>
+      <button aria-controls="nav-links" aria-expanded="false" aria-label="Ouvrir le menu" data-label-open="Ouvrir le menu" data-label-close="Fermer le menu" class="nav__toggle">
+        <svg aria-hidden="true" class="icon-open" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+        <svg aria-hidden="true" class="icon-close" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24"><line x1="6" x2="18" y1="6" y2="18"></line><line x1="6" x2="18" y1="18" y2="6"></line></svg>
+      </button>
+      <nav aria-label="Principale">
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="copb2.html">COPB2</a></li>
+        <li><a href="community.html">Communauté</a></li>
+
+        <li><a href="research.html">Recherche</a></li>
+        <li><a aria-current="page" href="therapy.html">Thérapie</a></li>
+        <li><a href="glossary.html">Glossaire</a></li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">Accueil</a> / Thérapie</p>
+        <span class="eyebrow">Thérapie &amp; rééducation</span>
+        <h1>Thérapie pour la diplégie spastique</h1>
+        <p class="lead measure">La diplégie spastique, c'est-à-dire des jambes raides et tendues qui rendent la station debout et la marche difficiles,
+          est l'un des schémas les plus fréquents de la paralysie cérébrale. La kinésithérapie est le principal moyen pour les
+          enfants de gagner en force, en mobilité et en autonomie, et les preuves reviennent sans cesse à une idée par-dessus
+          tout : <strong>une pratique active, orientée vers un objectif et répétée souvent l'emporte sur un traitement passif</strong>.</p>
+      </div>
+    </section>
+
+    <!-- Medical disclaimer / honest note -->
+    <section class="section section--tight" id="disclaimer">
+      <div class="container measure mx-auto">
+        <p class="note"><strong>Pas un avis médical.</strong> Il existe énormément de choses qui peuvent aider, et les
+          principes bien étudiés de la thérapie pour la diplégie spastique, à savoir active, orientée vers un objectif, précoce et
+          individualisée, se transposent bien, même s'il n'existe pas encore de protocole spécifique au COPB2. Comme
+          le COPB2 est génétique et peut se comporter différemment de la paralysie cérébrale par lésion cérébrale dont proviennent ces
+          preuves, un kinésithérapeute qualifié doit tout adapter à votre enfant et confirmer que rien ici n'est
+          inadapté, par exemple avant un renforcement vigoureux ou une chirurgie, et, pour la forme osseuse
+          (OPDD), comment solliciter les os en toute sécurité. Cette page est une information générale à visée éducative, pas un plan de
+          traitement.</p>
+      </div>
+    </section>
+
+    <!-- On this page -->
+    <section class="section section--tight">
+      <div class="container measure mx-auto">
+        <h2 id="on-this-page">Sur cette page</h2>
+        <nav aria-labelledby="on-this-page" class="toc">
+          <ul class="list-check mt-1">
+            <li><a href="#principle">L'idée unique qui fait fonctionner la thérapie</a></li>
+            <li><a href="#evidence">Ce que les preuves soutiennent</a></li>
+            <li><a href="#therapies">Les thérapies, expliquées</a></li>
+            <li><a href="#child">Comprendre votre enfant</a></li>
+            <li><a href="#early">La fenêtre précoce</a></li>
+            <li><a href="#team">Travailler avec votre équipe et trouver de l'aide</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- THE ONE IDEA -->
+    <section class="section" id="principle">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">L'idée centrale</span>
+        <h2>L'idée unique qui fait fonctionner la thérapie</h2>
+        <p class="mt-1">Dans chaque revue de grande qualité, les thérapies qui améliorent réellement le mouvement partagent
+          un même mécanisme : <strong>l'enfant fait le mouvement lui-même, le pratique beaucoup, et travaille vers un
+          objectif réel qui lui tient à cœur</strong>, comme monter les escaliers, suivre le rythme au terrain de jeu, ou marcher
+          jusqu'à sa classe. Une pratique active, répétée et significative est ce qui pousse le cerveau à se reconfigurer (ce que les scientifiques
+          appellent la neuroplasticité dépendante de l'expérience).</p>
+        <p>Le revers de la médaille est tout aussi important. <strong>Un traitement passif, pratiqué par le thérapeute</strong>, où un
+          thérapeute déplace l'enfant ou tente de « normaliser » le tonus musculaire pendant que l'enfant reste
+          passif, <strong>ne fonctionne pas</strong>. Un test utile : si une thérapie consiste surtout en quelque chose de fait
+          <em>à</em> votre enfant plutôt qu'en quelque chose que votre enfant fait activement, il est légitime d'en demander les
+          preuves.</p>
+        <p class="note">La carte de référence du domaine est la revue « code couleur » de Novak, qui
+          classe les traitements de la paralysie cérébrale en vert (à faire), jaune (probablement, et à mesurer) ou rouge
+          (à éviter) : <a href="https://pubmed.ncbi.nlm.nih.gov/32086598/" rel="noopener noreferrer" target="_blank">Novak et al., 2020 (PubMed)</a>.</p>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="evidence">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">Ce qui fonctionne</span>
+        <h2>Ce que les preuves soutiennent</h2>
+        <p class="mt-1">Un aperçu rapide des approches thérapeutiques pour la diplégie spastique, regroupées selon le degré de
+            soutien de la recherche. « Soutenu » signifie que les meilleures preuves disponibles appuient sa pratique,
+            pas qu'il s'agit d'une guérison.</p>
+      </div>
+      <div class="container">
+        <div aria-label="How strongly research supports each therapy" class="tl" role="group">
+          <div class="tl-card tl-green">
+            <h3><span aria-hidden="true" class="tl-dot"></span>À faire : Soutenu</h3>
+            <ul>
+              <li>Pratique orientée vers un objectif, spécifique à la tâche</li>
+              <li>Renforcement musculaire progressif</li>
+              <li>Tapis roulant (± soutien du poids du corps) et rééducation de la marche</li>
+              <li>Toxine botulique + thérapie active ; plâtres successifs</li>
+              <li>Rhizotomie dorsale sélective (pour une diplégie ambulante sélectionnée)</li>
+              <li>Orthèses cheville-pied, adaptées au problème</li>
+              <li>Surveillance des hanches ; mise en charge pour les os</li>
+              <li>Détection précoce et intervention précoce ; accompagnement des parents</li>
+            </ul>
+          </div>
+          <div class="tl-card tl-amber">
+            <h3><span aria-hidden="true" class="tl-dot"></span>Peut-être : Essayer et mesurer</h3>
+            <ul>
+              <li>Stimulation électrique fonctionnelle (pied tombant)</li>
+              <li>Rééducation robotisée de la marche (résultats mitigés)</li>
+              <li>Thérapie aquatique / hydrothérapie</li>
+              <li>Hippothérapie (surtout posture et tronc)</li>
+              <li>Vélo adapté ou avec stimulation électrique fonctionnelle (SEF)</li>
+              <li>Programmes de verticalisation (pour les os et les hanches)</li>
+            </ul>
+          </div>
+          <div class="tl-card tl-red">
+            <h3><span aria-hidden="true" class="tl-dot"></span>À questionner : Bénéfice faible ou nul</h3>
+            <ul>
+              <li>NDT / Bobath passif classique</li>
+              <li>Étirements passifs seuls (pour les contractures)</li>
+              <li>Intégration sensorielle (pour les habiletés motrices)</li>
+              <li>Thérapie par combinaison (Therasuit / Adeli)</li>
+              <li>Oxygénothérapie hyperbare ; thérapie craniosacrée</li>
+              <li>Éducation conductive, Vojta (pour les résultats moteurs)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container measure mx-auto">
+        <p class="note">Classements synthétisés à partir de <a href="https://pubmed.ncbi.nlm.nih.gov/32086598/" rel="noopener noreferrer" target="_blank">Novak et al., 2020</a>
+          et des revues Cochrane et des recommandations citées ci-dessous. La base de preuves sur la paralysie cérébrale est de
+          qualité essentiellement faible à modérée, ce sont donc des meilleures estimations, pas des garanties.</p>
+      </div>
+    </section>
+
+    <section class="section" id="therapies">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">Les éléments de base</span>
+        <h2>Les thérapies, expliquées</h2>
+        <p class="mt-1">Pour un enfant atteint de diplégie spastique, un bon plan combine généralement plusieurs de ces approches, choisies
+          autour des objectifs de la famille et du niveau de l'enfant.</p>
+
+        <ul class="tx-bands">
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 10.5v3M7 9v6M17 9v6M19.2 10.5v3M7 12h10"/></svg></span>
+<h3>Bouger et renforcer</h3>
+<span class="grade grade--green">Soutenu</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">Une pratique active et répétée de tâches réelles est le moteur de presque tous les
+                progrès.</p>
+<ul>
+<li><strong>Entraînement orienté vers un objectif, spécifique à la tâche</strong> : pratiquer la tâche réelle
+                  (se tenir debout, faire un pas, grimper) vers un objectif choisi. L'approche la plus efficace et la plus largement utile.</li>
+<li><strong>Renforcement musculaire progressif</strong> : développer la force des jambes <em>n'aggrave pas
+                  la spasticité</em> (une crainte de longue date, aujourd'hui démentie) et améliore la force,
+                  la vitesse de marche et l'équilibre. <a href="https://pubmed.ncbi.nlm.nih.gov/34407619/" rel="noopener noreferrer" target="_blank">(méta-analyse, 27 essais)</a>
+                  Une réserve : la force seule ne se traduit pas automatiquement par une meilleure marche, donc
+                  associez-la à la pratique de la tâche.</li>
+<li><strong>Pratique à domicile</strong> : une pratique courte, régulière et centrée sur un objectif, intégrée à
+                  la vie quotidienne, ajoute la <em>dose</em> qui fait fonctionner la thérapie. La quantité de pratique active
+                  compte plus que le nom de marque de la thérapie.</li>
+</ul>
+</div>
+</li>
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4.5" r="2"/><path d="M12.5 7.5L11 13.5L8 19.5"/><path d="M11 13.5l4 2l-1.5 4.5"/><path d="M9.3 11L12.3 8.7L15 10.7"/></svg></span>
+<h3>Marcher plus loin, plus facilement</h3>
+<span class="grade grade--green">Soutenu</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">Rendre la marche plus rapide, plus stable et moins fatigante grâce à une pratique
+                en conditions réelles.</p>
+<ul>
+<li><strong>Entraînement sur tapis roulant, avec ou sans soutien du poids du corps</strong>, qui figure parmi les
+                  approches les mieux classées pour améliorer la vitesse de marche chez les enfants capables de faire des pas (son effet
+                  sur l'endurance est moins certain).</li>
+<li><strong>Rééducation de la marche au sol et fonctionnelle</strong> : pratiquer la marche réelle
+                  dans des lieux réels ; la colonne vertébrale du travail sur la mobilité.</li>
+<li><strong>Condition physique aérobie</strong> : améliore l'endurance, la santé et la participation, et
+                  aide à contrer la tendance à devenir moins actif avec le temps.</li>
+</ul>
+</div>
+</li>
+<li class="tx-band tx-band--care"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="6.5" width="4" height="9" rx="1" transform="rotate(45 11 11)"/><path d="M7.8 14.2L5 17"/><path d="M14.2 7.8L17 5"/><path d="M16 4L18 6"/></svg></span>
+<h3>Gérer la spasticité</h3>
+<span class="grade grade--amber">Soutenu, avec précaution</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">Des traitements médicaux qui atténuent la raideur elle-même, associés à une thérapie
+                active.</p>
+<p>Il est utile de connaître la différence entre deux types de raideur : la <strong>spasticité</strong>,
+                c'est-à-dire une raideur musculaire qui résiste au mouvement rapide, peut souvent être atténuée (par exemple
+                avec la toxine botulique ou la chirurgie) ; mais une fois qu'un muscle devient une
+                <strong>contracture</strong> fixe et raccourcie, ces traitements du tonus ne peuvent plus l'inverser. C'est pourquoi
+                le <em>moment</em> compte. Ce sont des décisions qui reviennent à une équipe spécialisée :</p>
+<ul>
+<li><strong>Les injections de toxine botulique (« Botox »)</strong> dans des muscles
+                  tendus précis peuvent atténuer une raideur localisée pendant quelques mois, ouvrant une fenêtre pour la thérapie active et
+                  les plâtres. Elle est bien établie pour réduire le tonus, bien que son effet sur la
+                  <em>fonction</em> au quotidien soit moins certain et que les injections répétées soulèvent des questions sur la santé musculaire,
+                  donc elle est utilisée de façon sélective. <a href="https://pubmed.ncbi.nlm.nih.gov/31591703/" rel="noopener noreferrer" target="_blank">(revue Cochrane)</a></li>
+<li><strong>La rhizotomie dorsale sélective (SDR)</strong> est une opération rachidienne unique qui
+                  réduit définitivement la spasticité des jambes en sectionnant certaines racines nerveuses sensitives, suivie de
+                  plusieurs mois de kinésithérapie intensive. Chez des enfants marcheurs <em>soigneusement sélectionnés</em> atteints de
+                  diplégie spastique (souvent GMFCS II–III, vers 3 à 10 ans), elle peut apporter un soulagement durable de la
+                  spasticité et, chez des candidats bien choisis, des gains en marche et en autonomie rapportés
+                  des années plus tard. <a href="https://pubmed.ncbi.nlm.nih.gov/23713680/" rel="noopener noreferrer" target="_blank">(suivi à long terme)</a>
+                  Comme elle est irréversible et, comme toute chirurgie rachidienne, comporte des risques (modifications de la
+                  sensibilité, de la fonction vésicale ou intestinale, et des problèmes rachidiens ultérieurs comme la scoliose), elle n'est
+                  proposée qu'après une évaluation soignée par l'équipe, et les comparaisons directes à long terme avec une
+                  kinésithérapie intensive seule restent limitées.</li>
+<li><strong>Les plâtres successifs</strong> utilisent une série de plâtres qui allongent doucement un mollet tendu ;
+                  efficaces pour une raideur précoce, encore souple, souvent utilisés après la toxine botulique.</li>
+<li><strong>Le baclofène intrathécal et les médicaments oraux</strong> sont surtout destinés à une
+                  spasticité plus sévère et généralisée à tout le corps ; une décision médicale.</li>
+</ul>
+<p class="note">Sur la gestion de la spasticité chez l'enfant : <a href="https://www.nice.org.uk/guidance/cg145" rel="noopener noreferrer" target="_blank">recommandation NICE CG145</a>.</p>
+</div>
+</li>
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3.5v9.5q0 3 -3 3h-7q-2 0 -2 -2"/><path d="M12 3.5v9.5L5 14"/><path d="M12 6.5h5M12 10.5h5"/></svg></span>
+<h3>Appareillage et équipement</h3>
+<span class="grade grade--green">Soutenu</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">La bonne orthèse ou aide à la mobilité, adaptée au problème précis.</p>
+<ul>
+<li>Les <strong>orthèses cheville-pied (AFO)</strong> améliorent la marche, mais le <em>type</em>
+                  doit convenir au problème : une AFO rigide ou à lame ressort pour un pied tombant ; une AFO
+                  <strong>articulée</strong> quand l'enfant doit fléchir la cheville pour passer de la position assise à debout et pour les escaliers ; une
+                  AFO <strong>à réaction au sol</strong> pour un flexum souple. <a href="https://pubmed.ncbi.nlm.nih.gov/29714066/" rel="noopener noreferrer" target="_blank">(méta-analyse sur les AFO, 56 études)</a></li>
+<li><strong>Déambulateurs, cadres de marche et fauteuils roulants</strong> : la bonne aide à la mobilité pour
+                  le niveau de l'enfant soutient l'autonomie et la participation. Utiliser un fauteuil roulant pour les
+                  longues distances n'est pas « renoncer » à la marche ; cela économise de l'énergie pour ce qui compte.</li>
+<li>Les caractéristiques d'orthèse « réductrices de tonus » et les attelles de nuit ont des <strong>preuves
+                  faibles</strong>, il est donc raisonnable de les questionner.</li>
+</ul>
+</div>
+</li>
+<li class="tx-band"><div class="tx-band__head"><span class="tx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="8.7" y1="15.3" x2="15.3" y2="8.7"/><circle cx="7.4" cy="14.4" r="1.7"/><circle cx="9.6" cy="16.6" r="1.7"/><circle cx="14.4" cy="7.4" r="1.7"/><circle cx="16.6" cy="9.6" r="1.7"/></svg></span>
+<h3>Protéger les hanches et les os</h3>
+<span class="grade grade--green">Soutenu</span>
+</div>
+
+<div class="tx-band__body">
+
+<p class="pt-step__lead">Maintenir les hanches en place et les os solides à mesure que votre enfant grandit.</p>
+<ul>
+<li><strong>La surveillance des hanches</strong> : des radiographies régulières des hanches selon un calendrier défini par le niveau
+                  GMFCS permettent de détecter tôt un déplacement de hanche, quand il est le plus traitable. Les programmes de surveillance à
+                  l'échelle d'une population ont considérablement réduit les luxations de hanche. <a href="https://www.aacpdm.org/publications/care-pathways/hip-surveillance-in-cerebral-palsy" rel="noopener noreferrer" target="_blank">(parcours de soins AACPDM)</a></li>
+<li><strong>Mise en charge / verticalisation, vitamine D et calcium</strong> sont importants pour
+                  la solidité osseuse, en particulier chez les enfants qui marchent moins. (Pour la forme osseuse du COPB2, l'OPDD, planifiez
+                  la mise en charge avec un spécialiste des os.)</li>
+<li><strong>Prévenir les contractures</strong> : le mouvement actif, le renforcement, les plâtres et les
+                  programmes de verticalisation font plus que les étirements passifs, qui à eux seuls ne préviennent pas la
+                  raideur.</li>
+</ul>
+</div>
+</li>
+</ul>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="child">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">Connaître le point de départ</span>
+        <h2>Comprendre votre enfant</h2>
+
+        <h3 class="mt-3">GMFCS : Où il en est maintenant</h3>
+        <p class="mt-1">Le Système de classification de la fonction motrice globale décrit comment un enfant se déplace, en cinq
+          niveaux. La diplégie spastique se situe généralement aux niveaux I–III (marche, avec ou sans aides). Cela aide
+          l'équipe à fixer des objectifs réalistes, à évaluer le risque de hanche et à décider qui pourrait bénéficier d'options comme la chirurgie.
+          C'est un point de départ, <strong>pas un plafond</strong> sur ce vers quoi travailler.</p>
+        <p class="note">En gros, vers 6 à 12 ans :</p>
+        <ul class="gmfcs-scale">
+          <li><span class="gmfcs-lvl">I</span><span>Marche partout ; peut trouver la course, la vitesse ou l'équilibre plus difficiles.</span></li>
+          <li><span class="gmfcs-lvl">II</span><span>Marche dans la plupart des endroits ; peut tenir une rampe dans les escaliers et trouver les longues distances, les terrains accidentés ou la foule plus difficiles.</span></li>
+          <li><span class="gmfcs-lvl">III</span><span>Marche avec une aide tenue à la main comme un déambulateur ou des cannes, et peut utiliser un fauteuil roulant pour les plus longues distances.</span></li>
+          <li class="gmfcs-dim"><span class="gmfcs-lvl">IV–V</span><span>Mobilité principalement en fauteuil roulant (moins fréquente dans la diplégie spastique).</span></li>
+        </ul>
+        <p class="note"><a href="https://canchild.ca/en/resources/42-gross-motor-function-classification-system-expanded-revised-gmfcs-e-r" rel="noopener noreferrer" target="_blank">Le GMFCS expliqué (CanChild)</a></p>
+
+        <h3 class="mt-3">Des objectifs, pas la « normalité »</h3>
+        <p class="mt-1">La thérapie moderne fixe des <strong>objectifs précis choisis par la famille</strong> (par
+          exemple, « traverser la cuisine en sécurité ») et pratique cette tâche exacte. Les objectifs sont
+          suivis avec des outils simples (comme l'échelle d'atteinte des objectifs), pour que vous puissiez voir si la thérapie fonctionne
+          et l'ajuster.</p>
+
+        <h3 class="mt-3">Ce qui compte le plus</h3>
+        <p class="mt-1">Une façon simple de garder la thérapie tournée vers une bonne vie, et pas seulement vers la mécanique du corps : la manière dont un enfant
+          fait quelque chose compte plus que la manière dont cela paraît « normal ».</p>
+      </div>
+    </section>
+
+    <section class="section" id="early">
+      <div class="container measure mx-auto">
+        <span class="eyebrow">Le moment compte</span>
+        <h2>La fenêtre précoce</h2>
+        <p class="mt-1">La paralysie cérébrale et les problèmes moteurs apparentés peuvent désormais être détectés <strong>avant environ six mois
+          d'âge</strong> en combinant une évaluation du mouvement (les Mouvements généraux), un bref examen neurologique (le
+          HINE) et une IRM, bien avant un diagnostic traditionnel de type « attendre et voir ».
+          <a href="https://pubmed.ncbi.nlm.nih.gov/28715518/" rel="noopener noreferrer" target="_blank">(Novak et al., 2017)</a>
+          Cette fenêtre précoce est le moment où le cerveau est le plus adaptable, donc commencer tôt une pratique active, enrichie et délivrée par les parents,
+          avec des programmes comme <strong>GAME</strong> (Goals–Activity–Motor
+          Enrichment), en tire le meilleur parti. <a href="https://pubmed.ncbi.nlm.nih.gov/33999106/" rel="noopener noreferrer" target="_blank">(recommandation sur l'intervention précoce)</a></p>
+        <p><strong>L'accompagnement des parents</strong>, qui montre aux familles comment intégrer la pratique dans le jeu quotidien,
+          et le soutien au bien-être des aidants eux-mêmes sont en eux-mêmes des composantes fondées sur les preuves de bons
+          soins.</p>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="team">
+      <div class="container measure mx-auto">
+          <span class="eyebrow">Travailler ensemble</span>
+          <h2>Travailler avec votre équipe et trouver de l'aide</h2>
+          <p class="mt-1">Un bon plan thérapeutique est un partenariat entre vous, votre enfant et les personnes qui aident.</p>
+
+          <h3 class="mt-3">Ce qui le fait fonctionner</h3>
+          <ul class="list-check mt-1">
+            <li><strong>Fixez 2 à 3 objectifs concrets</strong> ensemble, et revenez-y régulièrement.</li>
+            <li><strong>Interrogez sur la dose</strong>, car un changement significatif nécessite généralement un volume réel de pratique,
+              en grande partie à la maison, et non une seule courte visite hebdomadaire en cabinet.</li>
+            <li><strong>Mesurez les progrès</strong> avec des outils standardisés (par exemple la Mesure de la fonction motrice
+              globale, ou l'échelle d'atteinte des objectifs) afin de pouvoir savoir ce qui aide.</li>
+            <li><strong>Constituez l'équipe</strong> : la kinésithérapie est en première ligne ici, aux côtés de l'ergothérapie
+              (tâches quotidiennes, mains, installation assise), de l'orthophonie et de la rééducation de l'alimentation au besoin, de l'appareillage orthopédique, et d'un médecin
+              pour la spasticité et la santé osseuse.</li>
+          </ul>
+
+          <h3 class="mt-3">Où trouver de l'aide</h3>
+      </div>
+      <div class="container">
+        <div class="grid grid--3 mt-3">
+          <article class="card">
+            <h3>Pour commencer (États-Unis)</h3>
+            <p>Une <strong>intervention précoce</strong> gratuite ou à faible coût (de la naissance à 3 ans) est disponible dans chaque
+              État dans le cadre de l'IDEA Part C. Une demande des parents ou une orientation par un pédiatre déclenche une évaluation
+              gratuite et un plan de soutien individualisé ; à partir de 3 ans, les services se poursuivent par le système
+              scolaire.</p>
+            <ul class="mt-1">
+              <li><a href="https://www.parentcenterhub.org/ei-overview/" rel="noopener noreferrer" target="_blank">L’intervention précoce : un aperçu</a></li>
+              <li><a href="https://ectacenter.org/partc/partc.asp" rel="noopener noreferrer" target="_blank">Trouvez le programme de votre État</a></li>
+            </ul>
+            <p class="note">En dehors des États-Unis, demandez à votre pédiatre ou à votre généticien clinicien de vous orienter vers les
+              services locaux de développement de l'enfant, d'intervention précoce ou de kinésithérapie.</p>
+          </article>
+          <article class="card card--accent">
+            <h3>Trouver un thérapeute</h3>
+            <ul class="mt-1">
+              <li><a href="https://pediatricapta.org/consumers/" rel="noopener noreferrer" target="_blank">APTA Pediatrics</a> : kinésithérapie, ressources pour les familles</li>
+              <li><a href="https://www.aota.org/" rel="noopener noreferrer" target="_blank">AOTA</a> : ergothérapie</li>
+              <li><a href="https://www.asha.org/" rel="noopener noreferrer" target="_blank">ASHA</a> : orthophonie &amp; thérapie de l’alimentation</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Recommandations et lectures approfondies</h3>
+            <ul class="mt-1">
+              <li><a href="https://pubmed.ncbi.nlm.nih.gov/32086598/" rel="noopener noreferrer" target="_blank">Novak : revue « code couleur » de ce qui fonctionne</a></li>
+              <li><a href="https://www.nice.org.uk/guidance/cg145" rel="noopener noreferrer" target="_blank">NICE CG145 : spasticité chez les moins de 19 ans</a></li>
+              <li><a href="https://www.nice.org.uk/guidance/ng62" rel="noopener noreferrer" target="_blank">NICE NG62 : paralysie cérébrale</a></li>
+              <li><a href="https://www.aacpdm.org/publications/care-pathways/" rel="noopener noreferrer" target="_blank">Parcours de soins AACPDM</a></li>
+              <li><a href="https://canchild.ca/" rel="noopener noreferrer" target="_blank">CanChild : GMFCS et outils pour les familles</a></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+      <div class="container measure mx-auto">
+        <p class="note mt-3">Quel que soit le diagnostic, un plan thérapeutique doit être
+          <strong>individualisé</strong>, et ces ressources sont un point de départ, pas une prescription.</p>
+      </div>
+    </section>
+
+    <section class="section section--teal">
+      <div class="container cta-banner">
+        <h2>Explorer davantage COPB2.org</h2>
+        <div class="btn-row btn-row--center mt-2">
+          <a class="btn btn--light" href="copb2.html">COPB2</a>
+
+          <a class="btn btn--light" href="research.html">Recherche</a>
+          <a class="btn btn--light" href="glossary.html">Glossaire</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a aria-label="Accueil COPB2.org" class="brand" href="index.html"><img alt="" class="brand__mark" height="36" src="../assets/favicon.png" width="36"/> <span class="brand__name" style="color:#fff">COPB2.org</span></a>
+          <p>Une ressource d’information indépendante et à but non lucratif sur le gène COPB2 et les maladies rares qui lui sont associées.</p>
+        </div>
+        <div class="footer">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="copb2.html">COPB2</a></li>
+
+            <li><a href="research.html">Recherche</a></li>
+            <li><a href="therapy.html">Thérapie</a></li>
+            <li><a href="glossary.html">Glossaire</a></li>
+            <li><a href="community.html">Communauté</a></li>
+          </ul>
+        </div>
+        <div class="footer">
+          <h4>Sources fiables</h4>
+          <ul>
+            <li><a href="https://omim.org/entry/606990" rel="noopener noreferrer" target="_blank">OMIM — COPB2</a></li>
+            <li><a href="https://www.ncbi.nlm.nih.gov/gene/9276" rel="noopener noreferrer" target="_blank">NCBI Gene 9276</a></li>
+            <li><a href="https://medlineplus.gov/genetics/" rel="noopener noreferrer" target="_blank">MedlinePlus Genetics</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year="">2026</span> COPB2.org. Une ressource d'information à but non lucratif.</span>
+        <span>Pas un avis médical · <a href="therapy.html#disclaimer">Lire notre clause de non-responsabilité</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/lang-nav.js"></script>
+
+  <!-- On-this-page scroll-spy (progressive enhancement) -->
+  <script>
+  (function () {
+    var nav = document.querySelector('nav.toc');
+    if (!nav) return;
+    var links = {};
+    var sections = [];
+    nav.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      var s = document.getElementById(id);
+      if (s) { links[id] = a; sections.push(s); }
+    });
+    if (!sections.length) return;
+    var current = null, ticking = false;
+    function update() {
+      ticking = false;
+      var activeId = null;
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i].getBoundingClientRect().top <= 100) activeId = sections[i].id;
+        else break;
+      }
+      var next = activeId ? links[activeId] : null;
+      if (next !== current) {
+        if (current) current.removeAttribute('aria-current');
+        current = next;
+        if (current) current.setAttribute('aria-current', 'location');
+      }
+    }
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    update();
+  })();
+  </script>
+
+
+</body></html>
